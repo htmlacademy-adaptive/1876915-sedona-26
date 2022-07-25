@@ -1,8 +1,8 @@
 # Личный проект «Седона» 
 
-* Студент: [Сергей Софронов](https://up.htmlacademy.ru/adaptive/26/user/1876915).
-* Наставник: `Неизвестно`.
-
+* Студент: [Сергей Софронов](https://htmlacademy.ru/profile/id1876915).
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
+* Проект: [Sedona](https://sergeysofronov.github.io/1876915-sedona-26/).
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
