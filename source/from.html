@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Седона</title>
+  </head>
+
+  <body class="page__body">
+    <header class="main-header">
+      <div class="main-header__logo">
+        <map name="logo">
+          <area shape="poly" coords="0,0,92,96,185,0" href="https://htmlacademy.ru/intensive/adaptive"
+            alt="Логотип сайта &quot; Седона &quot;" target="_blank">
+        </map>
+        <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
+      </div>
+      <nav class="main-navigation">
+        <button class="main-navigation__button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="feedback-container">
+      <header class="hero">
+        <h1 class="hero__tittle heading">Оставьте свой отзыв</h1>
+        <img class="hero__image" src="img/text-form.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <p class="hero__slogan heading">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
+          вами достопримечательностях</p>
+      </header>
+
+      <form class="feedback-form" action="#">
+        <h2 class="visually-hidden">Форма публикации отзыва</h2>
+        <div class="user-field-container">
+          <fieldset class="user-field">
+            <legend class="user-field__legend heading">Представьтесь:</legend>
+            <label class="user-field__input input"> Имя*:
+              <input class="input__text" type="text" name="first-name" value="Петр" placeholder="Имя" required>
+            </label>
+            <label class="user-field__input input"> Фамилия*:
+              <input class="input__text" type="text" name="middle-name" value="Пустота" placeholder="Фамилия" required>
+            </label>
+            <label class="user-field__input input"> Отчество*:
+              <input class="input__text" type="text" name="last-name" value="Викторович" placeholder="Отчество"
+                required>
+            </label>
+          </fieldset>
+
+          <fieldset class="user-contacts">
+            <legend class="user-contacts__legend heading">Контактная информация:</legend>
+            <label class="user-contacts__input input"> Контактный телефон*:
+              <input class="input__text" type="tel" name="tel" placeholder="Введите телефон" required>
+            </label>
+            <svg class="input__icon" width="0" height="0">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <label class="user-contacts__input input"> Электронная почта*:
+              <input class="input__text" type="email" name="email" placeholder="Введите e-mail" required>
+            </label>
+            <svg class="input__icon" width="0" height="0">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </fieldset>
+        </div>
+
+        <fieldset class="user-score">
+          <legend class="user-score__legend heading">Ваше общее впечатление:</legend>
+          <label class="user-score__label radio">
+            <input class="radio__input" type="radio" name="user-score">
+            Скорее положительное
+          </label>
+          <label class="user-score__label radio">
+            <input class="radio__input" type="radio" name="user-score">
+            Скорее отрицательное
+          </label>
+          <label class="user-score__label radio">
+            <input class="radio__input" type="radio" name="user-score">
+            Затрудняюсь ответить
+          </label>
+        </fieldset>
+
+        <fieldset class="user-visited">
+          <legend class="user-visited__legend heading">Посещенные достопримечательности:</legend>
+          <label class="user-visited__label check">
+            <input class="check-box__input" type="checkbox" name="first">
+            Скорее положительное
+          </label>
+          <label class="user-visited__label check">
+            <input class="check-box__input" type="checkbox" name="second">
+            Скорее отрицательное
+          </label>
+          <label class="user-visited__label check">
+            <input class="check-box__input" type="checkbox" name="third">
+            Затрудняюсь ответить
+          </label>
+        </fieldset>
+
+        <fieldset class="user-comment">
+          <legend class="user-comment__legend heading">Опишите свои эмоции:</legend>
+          <textarea class="user-comment__input" name="user-comment">Опишите подробно все свои восторги </textarea>
+        </fieldset>
+
+        <fieldset class="user-submit">
+          <button class="user-submit__button button" type="submit">Отправить отзыв</button>
+          <small class="user-submit__footnote">* — обязательные поля</small>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer class="main-footer">
+      <p class="main-footer__hashtag heading">#Visitsedona</p>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
+            <svg class="social-list__vk-icon" width="48" height="48">
+              <use xlink:href="img/sprite.svg#vk-default"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" title="Мы в Ютубе">
+            <svg class="social-list__youtube-icon" width="48" height="48">
+              <use xlink:href="img/sprite.svg#youtube-default"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://t.me/htmlacademy" title="Мы в Телеграме">
+            <svg class="social-list__telegram-icon" width="48" height="48">
+              <use xlink:href="img/sprite.svg#telegram-default"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="social-list__academy-icon" width="48" height="48">
+            <use xlink:href="img/sprite.svg#academy-default"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+
+    <template class="form-modal">
+      <h2 class="form-modal__tittle heading">Что-то пошло не так</h2>
+      <p class="form-modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="form-modal__button button" type="button">Отправить отзыв</button>
+    </template>
+
+  </body>
+
+</html>
