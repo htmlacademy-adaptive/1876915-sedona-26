@@ -1,0 +1,36 @@
+.input {
+  display: block;
+  text-align: left;
+}
+
+.input__text {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 16px;
+  width: 100%;
+  background-color: #f2f2f2;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 56px;
+  border-radius: 0;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.input__text-wrapper {
+  display: flex;
+}
+
+.input__icon {
+  display: block;
+}

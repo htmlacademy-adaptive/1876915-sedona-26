@@ -1,0 +1,29 @@
+.advantage-box {
+  .common-box();
+  display: block;
+  background-color: @bg-color-lightgray;
+  padding-top: 39px;
+
+  &--color {
+    color: #ffffff;
+    background-color: @bg-color-blue;
+  }
+
+  &--curved {
+    padding-top: 54px;
+    background-image: url("../img/shapes/box-triangle.svg");
+    background-size: contain;
+    background-position: 0 -16px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+  }
+}
+
+.advantage-box__number {
+  padding-top: 11px;
+}
+
+.advantage-box__description {
+  padding-top: 17px;
+  padding-bottom: 40px;
+}

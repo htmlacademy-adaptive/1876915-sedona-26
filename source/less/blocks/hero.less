@@ -1,0 +1,44 @@
+.hero {
+  padding-top: 55px;
+  overflow: hidden;
+}
+
+.hero__image {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 389px;
+  background-color: @bg-color-blue;
+  background-image:
+    url("../img/shapes/hero-triangle-mobile.svg"),
+    url("../img/hero/hero-back-mobile-full.jpg");
+  background-size: contain, cover;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 85px;
+  padding-top: 90px;
+  margin-bottom: 39px;
+
+  &--short {
+    height: 158px;
+    padding-top: 51px;
+    padding-bottom: 67px;
+    background-image:
+      url("../img/shapes/hero-triangle-mobile.svg"),
+      url("../img/hero/hero-back-mobile-short.jpg");
+  }
+}
+
+.hero__title {
+  .common-box();
+  .heading();
+  margin-bottom: 27px;
+}
+
+.hero__slogan {
+  .common-box();
+  margin-bottom: 27px;
+}
