@@ -14,14 +14,16 @@
     <header class="main-header">
       <div class="main-header__logo logo">
         <map class="logo__map" name="logo">
-          <area class="logo__area" shape="poly" coords="0,0,92,96,185,0" href="https://htmlacademy.ru/intensive/adaptive"
-            alt="Логотип сайта &quot; Седона &quot;" target="_blank">
+          <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
+            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot; Седона &quot;" target="_blank">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list heading">
+        <button class="main-nav__button main-nav__button--close">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
@@ -32,48 +34,50 @@
 
     <main class="main">
       <header class="hero">
-        <img class="hero__image" src="img/text-form.svg" alt="Добро пожаловать в Седону" width="229" height="39">
-        <h1 class="hero__tittle heading">Оставьте свой отзыв</h1>
+        <img class="hero__image hero__image--short" src="img/hero/hero-welcome-short.svg"
+          alt="Добро пожаловать в Седону" width="229" height="39">
+        <h1 class="hero__title">Оставьте свой отзыв</h1>
         <p class="hero__slogan">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
           вами достопримечательностях</p>
       </header>
 
       <form class="form" action="#">
         <h2 class="visually-hidden">Форма публикации отзыва</h2>
-        <div class="form__user-data">
-          <fieldset class="form__item form__item--introduction">
-            <legend class="form__legend heading">Представьтесь:</legend>
-            <label class="form__input input"> Имя*:
-              <input class="input__text" type="text" name="first-name" value="Петр" placeholder="Имя" required>
-            </label>
-            <label class="form__input input"> Фамилия*:
-              <input class="input__text" type="text" name="middle-name" value="Пустота" placeholder="Фамилия" required>
-            </label>
-            <label class="form__input input"> Отчество*:
-              <input class="input__text" type="text" name="last-name" value="Викторович" placeholder="Отчество"
-                required>
-            </label>
-          </fieldset>
+        <fieldset class="form__item form__item--introduction">
+          <legend class="form__legend">Представьтесь:</legend>
+          <label class="form__input input"> Имя*:
+            <input class="input__text" type="text" name="first-name" value="Петр" placeholder="Имя" min="2" max="25" required>
+          </label>
+          <label class="form__input input"> Фамилия*:
+            <input class="input__text" type="text" name="middle-name" value="Пустота" min="2" max="25" placeholder="Фамилия" required>
+          </label>
+          <label class="form__input input"> Отчество*:
+            <input class="input__text" type="text" name="last-name" value="Викторович" min="2" max="25" placeholder="Отчество" required>
+          </label>
+        </fieldset>
 
-          <fieldset class="form__item form__item--contacts">
-            <legend class="form__legend heading">Контактная информация:</legend>
-            <label class="form__input input"> Контактный телефон*:
+        <fieldset class="form__item form__item--contacts">
+          <legend class="form__legend">Контактная информация:</legend>
+          <label class="form__input input"> Контактный телефон*:
+            <div class="input__text-wrapper">
               <input class="input__text" type="tel" name="tel" placeholder="Введите телефон" required>
+              <svg class="input__icon" width="58" height="58">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </div>
             </label>
-            <svg class="input__icon" width="58" height="58">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
-            <label class="form__input input"> Электронная почта*:
+          <label class="form__input input"> Электронная почта*:
+            <div class="input__text-wrapper">
               <input class="input__text" type="email" name="email" placeholder="Введите e-mail" required>
-            </label>
-            <svg class="input__icon" width="58" height="58">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
-          </fieldset>
-        </div>
+              <svg class="input__icon" width="58" height="58">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+          </label>
+        </fieldset>
 
-        <fieldset class="form__item">
-          <legend class="form__legend heading">Ваше общее впечатление:</legend>
+        <fieldset class="form__item form__item--impression">
+          <legend class="form__legend form__legend--impression">Ваше общее впечатление:</legend>
           <label class="form__label radio">
             <input class="radio__input" type="radio" name="impression-positive">
             Скорее положительное
@@ -88,8 +92,8 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__item">
-          <legend class="form__legend heading">Посещенные достопримечательности:</legend>
+        <fieldset class="form__item form__item--places">
+          <legend class="form__legend">Посещенные достопримечательности:</legend>
           <label class="form__label check">
             <input class="check-box__input" type="checkbox" name="first-place">
             Мост Дьявола
@@ -99,25 +103,27 @@
             Гора-Колокол
           </label>
           <label class="form__label check">
+            <input class="check-box__input" type="checkbox" name="second-place">
+            Слайд-парк
+          </label>
+          <label class="form__label check">
             <input class="check-box__input" type="checkbox" name="third-place">
             Красные скалы
           </label>
         </fieldset>
 
         <fieldset class="form__item">
-          <legend class="form__legend heading">Опишите свои эмоции:</legend>
-          <textarea class="form__comment" name="user-comment">Опишите подробно все свои восторги </textarea>
+          <legend class="form__legend">Опишите свои эмоции:</legend>
+          <textarea class="form__comment" name="user-comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <fieldset class="form__item">
-          <button class="form__submit button" type="submit">Отправить отзыв</button>
-          <small class="form__note">* — обязательные поля</small>
-        </fieldset>
+        <button class="form__submit button" type="submit">Отправить отзыв</button>
+        <small class="form__note">* — обязательные поля</small>
       </form>
     </main>
 
     <footer class="footer">
-      <p class="footer__visit-tag heading">#Visitsedona</p>
+      <p class="footer__visit-tag">#Visitsedona</p>
       <ul class="footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
@@ -156,7 +162,7 @@
     </footer>
 
     <template class="form-modal">
-      <h2 class="form-modal__tittle heading">Что-то пошло не так</h2>
+      <h2 class="form-modal__title">Что-то пошло не так</h2>
       <p class="form-modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="form-modal__button button" type="button">Отправить отзыв</button>
     </template>

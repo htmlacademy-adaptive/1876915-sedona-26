@@ -20,8 +20,10 @@
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list heading">
+        <button class="main-nav__button main-nav__button--close">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
@@ -32,10 +34,10 @@
 
     <main class="main">
       <header class="hero">
-        <img class="hero__image" src="img/text-form.svg" alt="Добро пожаловать в Седону" width="229" height="39">
-        <h1 class="hero__tittle heading">Фото и видео</h1>
-        <p class="hero__slogan">Не можете решиться на путешествие из-за&nbsp;курса? Фотографии помогут вам
-          забыть&nbsp;о&nbsp;политике и экономике.</p>
+        <img class="hero__image hero__image--short" src="img/hero/hero-welcome-short.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <h1 class="hero__title">Фото и видео</h1>
+        <p class="hero__slogan">Не можете решиться&nbsp;на&nbsp;путешествие из&#8209;за курса? Фотографии помогут вам
+          забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.</p>
       </header>
 
       <section class="photo-catalog" aria-label="Каталог фотографий города">
@@ -45,7 +47,7 @@
           <li class="photo-catolog__item photo-catolog__item--main card">
             <img class="card__picture" src="img/catalog-photo-1-mobile.jpg" alt="Фотография местного ландшафта"
               width="280" height="280">
-            <p class="card__tittle">Неродные просторы</p>
+            <p class="card__title">Неродные просторы</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Борис</cite>
             </p>
@@ -64,7 +66,7 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-2-mobile.jpg" alt="Фотография местной растительности"
               width="280" height="280">
-            <p class="card__tittle">Местная растительность</p>
+            <p class="card__title">Местная растительность</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Сергей</cite>
             </p>
@@ -83,7 +85,7 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-3-mobile.jpg" alt="Фотография горной дороги на север"
               width="280" height="280">
-            <p class="card__tittle">Дорога на север</p>
+            <p class="card__title">Дорога на север</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Петр</cite>
             </p>
@@ -102,7 +104,7 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-4-mobile.jpg" alt="Фотография каньона" width="280"
               height="280">
-            <p class="card__tittle">Мост дьявола</p>
+            <p class="card__title">Мост дьявола</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Антон</cite>
             </p>
@@ -123,16 +125,17 @@
 
       <section class="video-catalog" aria-label="Видео материалы о городе">
         <h2 class="visually-hidden">Видео о достопримечательностях города</h2>
-        <p class="video-catalog__tittle heading">Всё еще сомневаетесь?</p>
+        <p class="video-catalog__title">Всё еще сомневаетесь?</p>
         <p class="video-catalog__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
-        <video src="https://9.react.pages.academy/static/film/video/traffic.mp4"
-          poster="img/advantage-picture-canyon-tablet.jpg" width="280" height="177" controls></video>
+        <video class="video-catalog__player" src="https://9.react.pages.academy/static/film/video/traffic.mp4"
+          poster="img/advantage-picture-canyon-tablet.jpg" controls>
+        </video>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__visit-tag heading">#Visitsedona</p>
+      <p class="footer__visit-tag">#Visitsedona</p>
       <ul class="footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">

@@ -14,14 +14,16 @@
     <header class="main-header">
       <div class="main-header__logo logo">
         <map class="logo__map" name="logo">
-          <area class="logo__area" shape="poly" coords="0,0,92,96,185,0" href="https://htmlacademy.ru/intensive/adaptive"
-            alt="Логотип сайта &quot;Седона&quot;" target="_blank">
+          <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
+            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot;Седона&quot;" target="_blank">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list heading">
+        <button class="main-nav__button main-nav__button--close">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
@@ -35,8 +37,8 @@
 
       <header class="hero">
         <h2 class="visually-hidden">Информация о городе</h2>
-        <img class="hero__image" src="img/text-index.svg" alt="Добро пожаловать в Седону" width="282" height="214">
-        <p class="hero__slogan heading">Седона - небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий большего!</p>
+        <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+        <p class="hero__title">Седона - небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий большего!</p>
       </header>
 
       <section class="advantages" aria-label="Отличительные черты города">
@@ -45,7 +47,7 @@
         <ol class="advantages__list">
           <li class="advantages__item">
             <div class="advantage-box advantage-box--color advantage-box--curved">
-              <h3 class="advantage-box__title heading">Настоящий городок</h3>
+              <h3 class="advantage-box__title">Настоящий городок</h3>
               <p class="advantage-box__number">- №1 -</p>
               <p class="advantage-box__description">Cедона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
@@ -53,22 +55,22 @@
               width="320" height="260">
             <ul class="advantages__sub-list">
               <li class="advantages__sub-item advantages__sub-item--home">
-                <p class="advantages__sub-tittle heading">Жилье</p>
+                <p class="advantages__sub-title">Жилье</p>
                 <p class="advantages__sub-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="advantages__sub-item advantages__sub-item--food">
-                <p class="advantages__sub-tittle heading">Еда</p>
+                <p class="advantages__sub-title">Еда</p>
                 <p class="advantages__sub-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantages__sub-item advantages__sub-item--souvenirs">
-                <p class="advantages__sub-tittle heading">Сувениры</p>
+                <p class="advantages__sub-title">Сувениры</p>
                 <p class="advantages__sub-description">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item">
             <div class="advantage-box advantage-box--color">
-              <h3 class="advantage-box__title advantage-box__title--color heading ">Там есть мост дьявола</h3>
+              <h3 class="advantage-box__title advantage-box__title--color">Там есть мост дьявола</h3>
               <p class="advantage-box__number">- №2 -</p>
               <p class="advantage-box__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
@@ -96,21 +98,19 @@
       <section class="hotel-search" aria-label="Отели на карте города">
         <header class="hotel-search__header">
           <h2 class="visually-hidden">Поиск отеля в Седоне</h2>
-          <p class="hotel-search__tittle heading">Заинтересовались?</p>
+          <p class="hotel-search__title">Заинтересовались?</p>
           <p class="hotel-search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
             гостиниц в Cедоне</p>
+          <a class="hotel-search__button button" href="javascript:void(0);">Найти гостиницу</a>
         </header>
-        <a class="hotel-search__button button" href="javascript:void(0);">Найти гостиницу</a>
-        <div class="hotel-search__map">
-          <iframe src="https://yandex.ru/map-widget/v1/-/CCURq6bjsA" width="320" height="350"
-            allowfullscreen="allowfullscreen">
-          </iframe>
-        </div>
+        <iframe class="hotel-search__map" src="https://yandex.ru/map-widget/v1/-/CCURq6bjsA" width="320" height="350"
+          allowfullscreen="allowfullscreen">
+        </iframe>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__visit-tag heading">#Visitsedona</p>
+      <p class="footer__visit-tag">#Visitsedona</p>
       <ul class="footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
@@ -141,7 +141,7 @@
         <p class="copyright__text">Разработано:</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="social-list__academy-icon" width="48" height="48">
-            <use xlink:href="img/sprite.svg#academy-default"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>
