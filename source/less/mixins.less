@@ -1,0 +1,35 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.heading(@_:small) {
+  font-size: @font-size-heading-small;
+  line-height: @line-height-heading-small;
+  font-weight: 700;
+}
+
+.heading(middle) {
+  font-size: @font-size-heading-middle;
+  line-height: @line-height-heading-middle;
+  font-weight: 700;
+}
+
+.heading(large) {
+  font-size: @font-size-heading-large;
+  line-height: @line-height-heading-large;
+  font-weight: 700;
+}
+
+.common-box() {
+  margin: 0 auto;
+  padding: 0 20px;
+}

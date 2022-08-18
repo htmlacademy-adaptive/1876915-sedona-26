@@ -3,57 +3,61 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer type="module" src="js/main.js"></script>
   </head>
 
   <body class="page__body">
     <header class="main-header">
-      <div class="main-header__logo">
-        <map name="logo">
-          <area shape="poly" coords="0,0,92,96,185,0" href="https://htmlacademy.ru/intensive/adaptive"
-            alt="Логотип сайта &quot; Седона &quot;" target="_blank">
+      <div class="main-header__logo logo">
+        <map class="logo__map" name="logo">
+          <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
+            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot; Седона &quot;" target="_blank">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
-      <nav class="main-navigation">
-        <button class="main-navigation__button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <button class="main-nav__button main-nav__button--close">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="catalog-container">
+    <main class="main">
       <header class="hero">
-        <h1 class="hero__tittle heading">Фото и видео</h1>
-        <img class="hero__image" src="img/text-form.svg" alt="Добро пожаловать в Седону" width="229" height="39">
-        <p class="hero__slogan heading">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
-          политике и экономике.</p>
+        <img class="hero__image hero__image--short" src="img/hero/hero-welcome-short.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <h1 class="hero__title">Фото и видео</h1>
+        <p class="hero__slogan">Не можете решиться&nbsp;на&nbsp;путешествие из&#8209;за курса? Фотографии помогут вам
+          забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.</p>
       </header>
 
-      <section class="photo-catalog">
+      <section class="photo-catalog" aria-label="Каталог фотографий города">
         <h2 class="visually-hidden">Фотографии достопримечательностей города</h2>
         <ul class="photo-catalog__list">
 
           <li class="photo-catolog__item photo-catolog__item--main card">
             <img class="card__picture" src="img/catalog-photo-1-mobile.jpg" alt="Фотография местного ландшафта"
               width="280" height="280">
-            <p class="card__tittle">Неродные просторы</p>
+            <p class="card__title">Неродные просторы</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Борис</cite>
             </p>
             <div class="card__ratings ratings">
-              <svg class="ratings__icon" width="0" height="0">
-                <use xlink:href="img/sprite.svg#like-default"></use>
-              </svg>
-              <button class="ratings__toggle" type="button">
+              <a class="ratings__toggle" href="javascript:void(0);">
+                <svg class="ratings__icon" width="23" height="21">
+                  <title>Поставить лайк</title>
+                  <use xlink:href="img/sprite.svg#like-default"></use>
+                </svg>
                 <span class="visually-hidden">Поставить лайк</span>
-              </button>
+              </a>
               <p class="ratings__counter">1350</p>
             </div>
           </li>
@@ -61,17 +65,18 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-2-mobile.jpg" alt="Фотография местной растительности"
               width="280" height="280">
-            <p class="card__tittle">Местная растительность</p>
+            <p class="card__title">Местная растительность</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Сергей</cite>
             </p>
             <div class="card__ratings ratings">
-              <svg class="ratings__icon" width="0" height="0">
-                <use xlink:href="img/sprite.svg#like-default"></use>
-              </svg>
-              <button class="ratings__toggle" type="button">
+              <a class="ratings__toggle" href="javascript:void(0);">
+                <svg class="ratings__icon" width="23" height="21">
+                  <title>Поставить лайк</title>
+                  <use xlink:href="img/sprite.svg#like-default"></use>
+                </svg>
                 <span class="visually-hidden">Поставить лайк</span>
-              </button>
+              </a>
               <p class="ratings__counter">143</p>
             </div>
           </li>
@@ -79,17 +84,18 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-3-mobile.jpg" alt="Фотография горной дороги на север"
               width="280" height="280">
-            <p class="card__tittle">Дорога на север</p>
+            <p class="card__title">Дорога на север</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Петр</cite>
             </p>
             <div class="card__ratings ratings">
-              <svg class="ratings__icon" width="0" height="0">
-                <use xlink:href="img/sprite.svg#like-default"></use>
-              </svg>
-              <button class="ratings__toggle" type="button">
+              <a class="ratings__toggle" href="javascript:void(0);">
+                <svg class="ratings__icon" width="23" height="21">
+                  <title>Поставить лайк</title>
+                  <use xlink:href="img/sprite.svg#like-default"></use>
+                </svg>
                 <span class="visually-hidden">Поставить лайк</span>
-              </button>
+              </a>
               <p class="ratings__counter">96</p>
             </div>
           </li>
@@ -97,17 +103,18 @@
           <li class="photo-catolog__item card">
             <img class="card__picture" src="img/catalog-photo-4-mobile.jpg" alt="Фотография каньона" width="280"
               height="280">
-            <p class="card__tittle">Мост дьявола</p>
+            <p class="card__title">Мост дьявола</p>
             <p class="card__picture-author">Автор фото:
               <cite class="card__author-name">Антон</cite>
             </p>
             <div class="card__ratings ratings">
-              <svg class="ratings__icon" width="0" height="0">
-                <use xlink:href="img/sprite.svg#like-default"></use>
-              </svg>
-              <button class="ratings__toggle" type="button">
+              <a class="ratings__toggle" href="javascript:void(0);">
+                <svg class="ratings__icon" width="23" height="21">
+                  <title>Поставить лайк</title>
+                  <use xlink:href="img/sprite.svg#like-default"></use>
+                </svg>
                 <span class="visually-hidden">Поставить лайк</span>
-              </button>
+              </a>
               <p class="ratings__counter">254</p>
             </div>
           </li>
@@ -115,22 +122,23 @@
         </ul>
       </section>
 
-      <section class="video-catalog">
+      <section class="video-catalog" aria-label="Видео материалы о городе">
         <h2 class="visually-hidden">Видео о достопримечательностях города</h2>
-        <p class="video-catalog__tittle heading">Всё еще сомневаетесь?</p>
+        <p class="video-catalog__title">Всё еще сомневаетесь?</p>
         <p class="video-catalog__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
-        <video src="https://9.react.pages.academy/static/film/video/traffic.mp4"
-          poster="img/advantage-picture-canyon-tablet.jpg" width="280" height="177" controls></video>
+        <video class="video-catalog__player" src="https://9.react.pages.academy/static/film/video/traffic.mp4"
+          poster="img/advantage-picture-canyon-tablet.jpg" controls>
+        </video>
       </section>
     </main>
 
-    <footer class="main-footer">
-      <p class="main-footer__hashtag heading">#Visitsedona</p>
-      <ul class="social-list">
+    <footer class="footer">
+      <p class="footer__visit-tag">#Visitsedona</p>
+      <ul class="footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
-            <svg class="social-list__vk-icon" width="48" height="48">
+            <svg class="social-list__icon social-list__icon--vk" width="48" height="48">
               <use xlink:href="img/sprite.svg#vk-default"></use>
             </svg>
             <span class="visually-hidden">Мы в Вконтакте</span>
@@ -138,7 +146,7 @@
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" title="Мы в Ютубе">
-            <svg class="social-list__youtube-icon" width="48" height="48">
+            <svg class="social-list__icon social-list__icon--youtube" width="48" height="48">
               <use xlink:href="img/sprite.svg#youtube-default"></use>
             </svg>
             <span class="visually-hidden">Мы в Ютубе</span>
@@ -146,15 +154,15 @@
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://t.me/htmlacademy" title="Мы в Телеграме">
-            <svg class="social-list__telegram-icon" width="48" height="48">
+            <svg class="social-list__icon social-list__icon--telegram" width="48" height="48">
               <use xlink:href="img/sprite.svg#telegram-default"></use>
             </svg>
             <span class="visually-hidden">Мы в Телеграме</span>
           </a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+      <div class="footer__copyright copyright">
+        <p class="copyright__text">Разработано:</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="social-list__academy-icon" width="48" height="48">
             <use xlink:href="img/sprite.svg#academy-default"></use>
@@ -163,13 +171,6 @@
         </a>
       </div>
     </footer>
-
-    <template class="form-modal">
-      <h2 class="form-modal__tittle heading">Что-то пошло не так</h2>
-      <p class="form-modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="form-modal__button button" type="button">Отправить отзыв</button>
-    </template>
-
   </body>
 
 </html>

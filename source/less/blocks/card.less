@@ -1,0 +1,32 @@
+.card {
+  .common-box();
+  padding-top: 20px;
+  text-align: left;
+  border-top: 1px solid #e5e5e5;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.card__picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  .heading();
+}
+
+.card__picture-author,
+.card__author-name {
+  text-transform: none;
+  font-style: normal;
+}
+
+.card__ratings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
