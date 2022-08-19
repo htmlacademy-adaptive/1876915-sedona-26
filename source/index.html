@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer type="module" src="js/main.js"></script>
   </head>
 
   <body class="page__body">
@@ -22,12 +21,17 @@
         <button class="main-nav__button main-nav__button--close">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
-        </ul>
+        <div class="main-nav__menu">
+          <ul class="main-nav__list main-nav__list--first">
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--second">
+            <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -36,7 +40,8 @@
 
       <header class="hero">
         <h2 class="visually-hidden">Информация о городе</h2>
-        <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+        <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282"
+          height="214">
         <p class="hero__title">Седона - небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий большего!</p>
       </header>
 
@@ -50,8 +55,8 @@
               <p class="advantage-box__number">- №1 -</p>
               <p class="advantage-box__description">Cедона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages__picture" src="img/advantage-picture-city-mobile.jpg" alt="Фотография бара в городе"
-              width="320" height="260">
+            <img class="advantages__picture" src="img/advantages/advantage-picture-city-mobile.jpg"
+              alt="Фотография бара в городе" width="320" height="260">
             <ul class="advantages__sub-list">
               <li class="advantages__sub-item advantages__sub-item--home">
                 <p class="advantages__sub-title">Жилье</p>
@@ -73,7 +78,7 @@
               <p class="advantage-box__number">- №2 -</p>
               <p class="advantage-box__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__picture" src="img/advantage-picture-canyon-mobile.jpg"
+            <img class="advantages__picture" src="img/advantages/advantage-picture-canyon-mobile.jpg"
               alt="Фотография бара в городе" width="320" height="260">
           </li>
           <li class="advantages__item advantage-box">
@@ -146,6 +151,8 @@
         </a>
       </div>
     </footer>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

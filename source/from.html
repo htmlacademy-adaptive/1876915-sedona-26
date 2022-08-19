@@ -22,12 +22,16 @@
         <button class="main-nav__button main-nav__button--close">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <div class="main-nav__menu">
+          <ul class="main-nav__list main-nav__list--first">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--second">
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -166,6 +170,7 @@
       <button class="form-modal__button button" type="button">Отправить отзыв</button>
     </template>
 
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

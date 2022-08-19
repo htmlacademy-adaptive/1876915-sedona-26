@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer type="module" src="js/main.js"></script>
   </head>
 
   <body class="page__body">
@@ -22,13 +21,17 @@
         <button class="main-nav__button main-nav__button--close">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
-        </ul>
-      </nav>
+        <div class="main-nav__menu">
+          <ul class="main-nav__list main-nav__list--first">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--second">
+            <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+          </ul>
+        </div>
+        </nav>
     </header>
 
     <main class="main">
@@ -44,7 +47,7 @@
         <ul class="photo-catalog__list">
 
           <li class="photo-catolog__item photo-catolog__item--main card">
-            <img class="card__picture" src="img/catalog-photo-1-mobile.jpg" alt="Фотография местного ландшафта"
+            <img class="card__picture" src="img/catalog/catalog-photo-1-mobile.jpg" alt="Фотография местного ландшафта"
               width="280" height="280">
             <p class="card__title">Неродные просторы</p>
             <p class="card__picture-author">Автор фото:
@@ -63,7 +66,7 @@
           </li>
 
           <li class="photo-catolog__item card">
-            <img class="card__picture" src="img/catalog-photo-2-mobile.jpg" alt="Фотография местной растительности"
+            <img class="card__picture" src="img/catalog/catalog-photo-2-mobile.jpg" alt="Фотография местной растительности"
               width="280" height="280">
             <p class="card__title">Местная растительность</p>
             <p class="card__picture-author">Автор фото:
@@ -82,7 +85,7 @@
           </li>
 
           <li class="photo-catolog__item card">
-            <img class="card__picture" src="img/catalog-photo-3-mobile.jpg" alt="Фотография горной дороги на север"
+            <img class="card__picture" src="img/catalog/catalog-photo-3-mobile.jpg" alt="Фотография горной дороги на север"
               width="280" height="280">
             <p class="card__title">Дорога на север</p>
             <p class="card__picture-author">Автор фото:
@@ -101,7 +104,7 @@
           </li>
 
           <li class="photo-catolog__item card">
-            <img class="card__picture" src="img/catalog-photo-4-mobile.jpg" alt="Фотография каньона" width="280"
+            <img class="card__picture" src="img/catalog/catalog-photo-4-mobile.jpg" alt="Фотография каньона" width="280"
               height="280">
             <p class="card__title">Мост дьявола</p>
             <p class="card__picture-author">Автор фото:
@@ -128,7 +131,7 @@
         <p class="video-catalog__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
         <video class="video-catalog__player" src="https://9.react.pages.academy/static/film/video/traffic.mp4"
-          poster="img/advantage-picture-canyon-tablet.jpg" controls>
+          poster="img/advantages/advantage-picture-canyon-tablet.jpg" controls>
         </video>
       </section>
     </main>
@@ -171,6 +174,8 @@
         </a>
       </div>
     </footer>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

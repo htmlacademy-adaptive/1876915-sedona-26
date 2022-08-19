@@ -1,9 +1,13 @@
 .main-header {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-header__logo {
   position: absolute;
-  margin: 0 auto;
-  width: 100%;
+  align-self: center;
+
+  @media @tablet {
+    z-index: 1;
+  }
 }
