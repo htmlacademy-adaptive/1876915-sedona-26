@@ -13,6 +13,12 @@
     display: flex;
     background-color: @bg-color-white;
   }
+
+  &--hidden {
+    @media @mobile {
+      .visually-hidden();
+    }
+  }
 }
 
 .main-nav__list {
@@ -34,6 +40,7 @@
 
   @media @tablet {
     flex-grow: 1;
+    box-shadow: none;
 
     .main-nav__list--first &:last-child {
       margin-right: 93px;
@@ -77,15 +84,13 @@
   background-size: contain;
   cursor: pointer;
 
-  &--close {
-    background-image: url("../img/nav-button/menu-close.svg");
-  }
+  background-image: url("../img/nav-button/menu-close.svg");
 
-  &--close:hover {
+  &:hover {
     background-image: url("../img/nav-button/menu-close-hover.svg");
   }
 
-  &--close:active {
+  &:active {
     background-image: url("../img/nav-button/menu-close-down.svg");
   }
 

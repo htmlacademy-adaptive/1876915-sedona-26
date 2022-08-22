@@ -6,10 +6,19 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @media @tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__item {
   @media @tablet {
+    &--full {
+      grid-column: 1/-1;
+    }
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -21,7 +30,9 @@
 
   @media @tablet {
     grid-column: 1/-1;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 }
 
@@ -54,6 +65,10 @@
 
 .advantages__sub-description {
   padding-left: 65px;
+
+  // @media @tablet {
+  //   padding-left: 0;
+  // }
 }
 
 .advantages__picture {

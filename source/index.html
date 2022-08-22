@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
   </head>
 
   <body class="page__body">
@@ -13,12 +14,12 @@
       <div class="main-header__logo logo">
         <map class="logo__map" name="logo">
           <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
-            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot;Седона&quot;" target="_blank">
+            href="index.html" alt="Логотип сайта &quot;Седона&quot;">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close">
+        <button class="main-nav__button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__menu">
@@ -49,7 +50,7 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона&nbsp;круче, чем гранд каньон!</p>
         <ol class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--full">
             <div class="advantage-box advantage-box--color advantage-box--curved">
               <h3 class="advantage-box__title">Настоящий городок</h3>
               <p class="advantage-box__number">- №1 -</p>
@@ -72,7 +73,7 @@
               </li>
             </ul>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--full">
             <div class="advantage-box advantage-box--color">
               <h3 class="advantage-box__title advantage-box__title--color">Там есть мост дьявола</h3>
               <p class="advantage-box__number">- №2 -</p>
@@ -152,7 +153,6 @@
       </div>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>
