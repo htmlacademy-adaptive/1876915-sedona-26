@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
     <base href="https://htmlacademy-adaptive.github.io/1876915-sedona-26/4/">
 </head>
 
@@ -14,30 +15,32 @@
       <div class="main-header__logo logo">
         <map class="logo__map" name="logo">
           <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
-            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot; Седона &quot;" target="_blank">
+            href="index.html" alt="Логотип сайта &quot; Седона &quot;">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close">
+        <button class="main-nav__button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__menu">
           <ul class="main-nav__list main-nav__list--first">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и
+                видео</a></li>
           </ul>
           <ul class="main-nav__list main-nav__list--second">
             <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
           </ul>
         </div>
-        </nav>
+      </nav>
     </header>
 
     <main class="main">
       <header class="hero">
-        <img class="hero__image hero__image--short" src="img/hero/hero-welcome-short.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <img class="hero__image hero__image--short" src="img/hero/hero-welcome-short.svg"
+          alt="Добро пожаловать в Седону" width="229" height="39">
         <h1 class="hero__title">Фото и видео</h1>
         <p class="hero__slogan">Не можете решиться&nbsp;на&nbsp;путешествие из&#8209;за курса? Фотографии помогут вам
           забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.</p>
@@ -47,79 +50,95 @@
         <h2 class="visually-hidden">Фотографии достопримечательностей города</h2>
         <ul class="photo-catalog__list">
 
-          <li class="photo-catolog__item photo-catolog__item--main card">
+          <li class="photo-catalog__item photo-catalog__item--main card">
             <img class="card__picture" src="img/catalog/catalog-photo-1-mobile.jpg" alt="Фотография местного ландшафта"
               width="280" height="280">
-            <p class="card__title">Неродные просторы</p>
-            <p class="card__picture-author">Автор фото:
-              <cite class="card__author-name">Борис</cite>
-            </p>
-            <div class="card__ratings ratings">
-              <a class="ratings__toggle" href="javascript:void(0);">
-                <svg class="ratings__icon" width="23" height="21">
-                  <title>Поставить лайк</title>
-                  <use xlink:href="img/sprite.svg#like-default"></use>
-                </svg>
-                <span class="visually-hidden">Поставить лайк</span>
-              </a>
-              <p class="ratings__counter">1350</p>
+            <div class="card__under-picture">
+              <div class="card__description">
+                <p class="card__title">Неродные просторы</p>
+                <p class="card__picture-author">Автор фото:
+                  <cite class="card__author-name">Борис</cite>
+                </p>
+              </div>
+              <div class="card__ratings ratings">
+                <a class="ratings__toggle" href="javascript:void(0);">
+                  <svg class="ratings__icon" width="23" height="21">
+                    <title>Поставить лайк</title>
+                    <use xlink:href="img/sprite.svg#like-default"></use>
+                  </svg>
+                  <span class="visually-hidden">Поставить лайк</span>
+                </a>
+                <p class="ratings__counter">1350</p>
+              </div>
             </div>
           </li>
 
-          <li class="photo-catolog__item card">
-            <img class="card__picture" src="img/catalog/catalog-photo-2-mobile.jpg" alt="Фотография местной растительности"
-              width="280" height="280">
-            <p class="card__title">Местная растительность</p>
-            <p class="card__picture-author">Автор фото:
-              <cite class="card__author-name">Сергей</cite>
-            </p>
-            <div class="card__ratings ratings">
-              <a class="ratings__toggle" href="javascript:void(0);">
-                <svg class="ratings__icon" width="23" height="21">
-                  <title>Поставить лайк</title>
-                  <use xlink:href="img/sprite.svg#like-default"></use>
-                </svg>
-                <span class="visually-hidden">Поставить лайк</span>
-              </a>
-              <p class="ratings__counter">143</p>
+          <li class="photo-catalog__item card">
+            <img class="card__picture" src="img/catalog/catalog-photo-2-mobile.jpg"
+              alt="Фотография местной растительности" width="280" height="280">
+            <div class="card__under-picture">
+              <div class="card__description">
+                <p class="card__title">Местная растительность</p>
+                <p class="card__picture-author">Автор фото:
+                  <cite class="card__author-name">Сергей</cite>
+                </p>
+              </div>
+              <div class="card__ratings ratings">
+                <a class="ratings__toggle" href="javascript:void(0);">
+                  <svg class="ratings__icon" width="23" height="21">
+                    <title>Поставить лайк</title>
+                    <use xlink:href="img/sprite.svg#like-default"></use>
+                  </svg>
+                  <span class="visually-hidden">Поставить лайк</span>
+                </a>
+                <p class="ratings__counter">143</p>
+              </div>
             </div>
           </li>
 
-          <li class="photo-catolog__item card">
-            <img class="card__picture" src="img/catalog/catalog-photo-3-mobile.jpg" alt="Фотография горной дороги на север"
-              width="280" height="280">
-            <p class="card__title">Дорога на север</p>
-            <p class="card__picture-author">Автор фото:
-              <cite class="card__author-name">Петр</cite>
-            </p>
-            <div class="card__ratings ratings">
-              <a class="ratings__toggle" href="javascript:void(0);">
-                <svg class="ratings__icon" width="23" height="21">
-                  <title>Поставить лайк</title>
-                  <use xlink:href="img/sprite.svg#like-default"></use>
-                </svg>
-                <span class="visually-hidden">Поставить лайк</span>
-              </a>
-              <p class="ratings__counter">96</p>
+          <li class="photo-catalog__item card">
+            <img class="card__picture" src="img/catalog/catalog-photo-3-mobile.jpg"
+              alt="Фотография горной дороги на север" width="280" height="280">
+            <div class="card__under-picture">
+              <div class="card__description">
+                <p class="card__title">Дорога на север</p>
+                <p class="card__picture-author">Автор фото:
+                  <cite class="card__author-name">Петр</cite>
+                </p>
+              </div>
+              <div class="card__ratings ratings">
+                <a class="ratings__toggle" href="javascript:void(0);">
+                  <svg class="ratings__icon" width="23" height="21">
+                    <title>Поставить лайк</title>
+                    <use xlink:href="img/sprite.svg#like-default"></use>
+                  </svg>
+                  <span class="visually-hidden">Поставить лайк</span>
+                </a>
+                <p class="ratings__counter">96</p>
+              </div>
             </div>
           </li>
 
-          <li class="photo-catolog__item card">
+          <li class="photo-catalog__item card">
             <img class="card__picture" src="img/catalog/catalog-photo-4-mobile.jpg" alt="Фотография каньона" width="280"
               height="280">
-            <p class="card__title">Мост дьявола</p>
-            <p class="card__picture-author">Автор фото:
-              <cite class="card__author-name">Антон</cite>
-            </p>
-            <div class="card__ratings ratings">
-              <a class="ratings__toggle" href="javascript:void(0);">
-                <svg class="ratings__icon" width="23" height="21">
-                  <title>Поставить лайк</title>
-                  <use xlink:href="img/sprite.svg#like-default"></use>
-                </svg>
-                <span class="visually-hidden">Поставить лайк</span>
-              </a>
-              <p class="ratings__counter">254</p>
+            <div class="card__under-picture">
+              <div class="card__description">
+                <p class="card__title">Мост дьявола</p>
+                <p class="card__picture-author">Автор фото:
+                  <cite class="card__author-name">Антон</cite>
+                </p>
+              </div>
+              <div class="card__ratings ratings">
+                <a class="ratings__toggle" href="javascript:void(0);">
+                  <svg class="ratings__icon" width="23" height="21">
+                    <title>Поставить лайк</title>
+                    <use xlink:href="img/sprite.svg#like-default"></use>
+                  </svg>
+                  <span class="visually-hidden">Поставить лайк</span>
+                </a>
+                <p class="ratings__counter">254</p>
+              </div>
             </div>
           </li>
 
@@ -176,7 +195,6 @@
       </div>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

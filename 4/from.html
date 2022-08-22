@@ -7,6 +7,7 @@
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
     <base href="https://htmlacademy-adaptive.github.io/1876915-sedona-26/4/">
 </head>
 
@@ -15,22 +16,23 @@
       <div class="main-header__logo logo">
         <map class="logo__map" name="logo">
           <area class="logo__area" shape="poly" coords="0,0,92,96,185,0"
-            href="https://htmlacademy.ru/intensive/adaptive" alt="Логотип сайта &quot; Седона &quot;" target="_blank">
+            href="index.html" alt="Логотип сайта &quot; Седона &quot;">
         </map>
         <img usemap="#logo" src="img/logo.svg" alt="Логотип сайта &quot; Седона &quot;" width="185" height="96">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__button main-nav__button--close">
+        <button class="main-nav__button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__menu">
           <ul class="main-nav__list main-nav__list--first">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           </ul>
           <ul class="main-nav__list main-nav__list--second">
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="from.html">Форма
+                Отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
           </ul>
         </div>
       </nav>
@@ -50,13 +52,16 @@
         <fieldset class="form__item form__item--introduction">
           <legend class="form__legend">Представьтесь:</legend>
           <label class="form__input input"> Имя*:
-            <input class="input__text" type="text" name="first-name" value="Петр" placeholder="Имя" min="2" max="25" required>
+            <input class="input__text" type="text" name="first-name" value="Петр" placeholder="Имя" min="2" max="25"
+              required>
           </label>
           <label class="form__input input"> Фамилия*:
-            <input class="input__text" type="text" name="middle-name" value="Пустота" min="2" max="25" placeholder="Фамилия" required>
+            <input class="input__text" type="text" name="middle-name" value="Пустота" min="2" max="25"
+              placeholder="Фамилия" required>
           </label>
           <label class="form__input input"> Отчество*:
-            <input class="input__text" type="text" name="last-name" value="Викторович" min="2" max="25" placeholder="Отчество" required>
+            <input class="input__text" type="text" name="last-name" value="Викторович" min="2" max="25"
+              placeholder="Отчество" required>
           </label>
         </fieldset>
 
@@ -69,7 +74,7 @@
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
             </div>
-            </label>
+          </label>
           <label class="form__input input"> Электронная почта*:
             <div class="input__text-wrapper">
               <input class="input__text" type="email" name="email" placeholder="Введите e-mail" required>
@@ -118,7 +123,8 @@
 
         <fieldset class="form__item">
           <legend class="form__legend">Опишите свои эмоции:</legend>
-          <textarea class="form__comment" name="user-comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="form__comment" name="user-comment"
+            placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
         <button class="form__submit button" type="submit">Отправить отзыв</button>
@@ -165,13 +171,29 @@
       </div>
     </footer>
 
-    <template class="form-modal">
-      <h2 class="form-modal__title">Что-то пошло не так</h2>
-      <p class="form-modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="form-modal__button button" type="button">Отправить отзыв</button>
-    </template>
+    <section class="form-modal visually-hidden">
+      <div class="form-modal__error">
+        <div class="form-modal__description">
+          <h2 class="form-modal__title">Что-то пошло не так</h2>
+          <p class="form-modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <button class="form-modal__button button" type="button">Отправить отзыв</button>
+      </div>
+      <div class="form-modal__success">
+        <div class="form-modal__description">
+          <h2 class="form-modal__title">Ваш&nbsp;отзыв&nbsp;отправлен!</h2>
+          <p class="form-modal__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+            опубликуем его на сайте.</p>
+        </div>
+        <div class="form-modal__button-wrapper ">
+          <button class="form-modal__button button" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="js/main.js"></script>
+    <!-- <template class="form-modal-template">
+    </template> -->
+
   </body>
 
 </html>
