@@ -1,5 +1,9 @@
 .form {
   display: grid;
+
+  @media @tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form__item {
@@ -8,14 +12,42 @@
   padding: 71px 20px 39px 20px;
   margin: 0;
 
+  @media @tablet {
+    grid-column: 1/-1;
+
+    &--introduction {
+      grid-column: 1/2;
+    }
+
+    &--contacts {
+      grid-column: 2/3;
+    }
+  }
+
   &--impression {
     display: grid;
     justify-items: start;
+
+    @media @tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media @desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &--places {
     display: grid;
     justify-items: start;
+
+    @media @tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media @desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
@@ -34,6 +66,27 @@
   margin-bottom: 16px;
 }
 
+.form__item--introduction .form__input {
+  @media @tablet {
+    padding-right: 43px;
+  }
+
+  @media @desktop {
+    padding-right: 63px;
+  }
+}
+
+.form__item--contacts .form__input {
+  @media @tablet {
+    padding-left: 43px;
+  }
+
+  @media @desktop {
+    padding-left: 63px;
+  }
+}
+
+
 .form__comment {
   box-sizing: border-box;
   background-color: #f2f2f2;
@@ -45,7 +98,7 @@
   line-height: 26px;
 
   &::placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: @bg-color-modal;
   }
 }
 

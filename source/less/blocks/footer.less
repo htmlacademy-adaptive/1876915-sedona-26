@@ -1,8 +1,21 @@
 .footer {
   .common-box();
   margin-top: auto;
-  padding-top: 38px;
-  padding-bottom: 22px;
+  padding: 38px 57px 22px 57px;
+  // padding-top: 38px;
+  // padding-bottom: 22px;
+
+  @media @tablet {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media @desktop {
+    padding-left: 114px;
+    padding-right: 120px;
+  }
 }
 
 .footer__visit-tag {

@@ -1,11 +1,10 @@
 const navButton = document.querySelector('.main-nav__button');
-const navList = document.querySelector('.main-nav__list');
+const navMenu = document.querySelector('.main-nav__menu');
 
 const onNavButtonClick = () => {
-  navButton.classList.toggle('main-nav__button--close');
   navButton.classList.toggle('main-nav__button--open');
-  navList.classList.toggle('visually-hidden');
+  navMenu.classList.toggle('main-nav__menu--hidden');
 }
 
-document.addEventListener("DOMContentLoaded", onNavButtonClick);
 navButton.addEventListener('click', onNavButtonClick);
+onNavButtonClick();

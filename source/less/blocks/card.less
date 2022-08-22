@@ -1,11 +1,30 @@
 .card {
   .common-box();
-  padding-top: 20px;
+  position: relative;
   text-align: left;
+  padding: 0;
   border-top: 1px solid #e5e5e5;
 
   &:last-of-type {
-    border-bottom: 1px solid #e5e5e5;
+    @media @mobile {
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+}
+
+.card__under-picture {
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media @desktop {
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @bg-color-modal;
   }
 }
 
@@ -29,4 +48,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media @tablet {
+    justify-self: end;
+  }
 }
