@@ -1,29 +1,64 @@
 .hotel-search {
-  padding-top: 38px;
-}
-
-.hotel-search__header {
-  .common-box();
+  padding: 0 20px;
 }
 
 .hotel-search__title {
   .heading(middle);
+  padding-top: 45px;
+  margin-top: 0;
   margin-bottom: 20px;
+
+  @media @tablet {
+    .heading(large);
+    padding-top: 55px;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    padding-top: 57px;
+  }
 }
 
 .hotel-search__description {
-  padding-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  @media @tablet {
+    margin-bottom: 43px;
+  }
+
+  @media @desktop {
+    margin-bottom: 48px;
+  }
+
+  @media @mobile {
+    & br {
+      display: none;
+    }
+  }
 }
 
 .hotel-search__button {
-  padding: 15px;
+  .heading(middle);
+  padding: 16px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 49px;
-  max-width: 458px;
+  max-width: 426px;
+
+  @media @tablet {
+    margin-bottom: 59px;
+  }
+
+  @media @desktop {
+    margin-bottom: 66px;
+  }
 }
 
 .hotel-search__map {
+  display: block;
   width: 100%;
-  //todo: как задать пропорциональную высоту?
+  height: 350px;
+  border: none;
+  margin-bottom: 37px;
 }

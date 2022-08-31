@@ -1,21 +1,15 @@
 .card {
-  .common-box();
   position: relative;
   text-align: left;
-  padding: 0;
-  border-top: 1px solid #e5e5e5;
-
-  &:last-of-type {
-    @media @mobile {
-      border-bottom: 1px solid #e5e5e5;
-    }
-  }
 }
 
 .card__under-picture {
   @media @tablet {
     display: flex;
+    padding: 0 20px;
     justify-content: space-between;
+    align-items: center;
+    background-color: @bg-color-under-picture;
   }
 
   @media @desktop {
@@ -35,21 +29,33 @@
 }
 
 .card__title {
-  .heading();
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 1px;
+
+  @media @tablet {
+    margin-top: 22px;
+  }
+}
+
+.card__description {
+  margin-bottom: 11px;
+
+  @media @tablet {
+    margin-bottom: 15px;
+  }
 }
 
 .card__picture-author,
 .card__author-name {
   text-transform: none;
+  margin: 0;
+}
+
+.card__author-name {
   font-style: normal;
 }
 
 .card__ratings {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  @media @tablet {
-    justify-self: end;
-  }
+  margin-bottom: 5px;
 }
