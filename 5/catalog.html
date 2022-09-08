@@ -5,6 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="img/favicons/32x32.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/main.js"></script>
 
@@ -40,7 +61,7 @@
 
   <body class="page__body">
     <div class="page__body-wrapper">
-      <header class="main-header">
+      <header class="main-header main-header--no-js">
         <map class="main-header__logo" name="logo">
           <area class="main-header__area" shape="poly" coords="0,0,92,96,185,0" href="index.html"
             alt="Логотип сайта &quot;Седона&quot;">
@@ -51,27 +72,25 @@
           <button class="main-nav__button main-nav__button--opened">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="main-nav__menu">
-            <ul class="main-nav__list main-nav__list--first">
-              <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и
-                  видео</a></li>
-            </ul>
-            <ul class="main-nav__list main-nav__list--second">
-              <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="catalog.html">Фото и
+                видео</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="from.html">Форма Отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+          </ul>
         </nav>
       </header>
 
       <main class="main">
         <header class="hero">
           <div class="hero__image-wrapper hero__image-wrapper--catalog">
-            <img class="hero__image hero__image--catalog" src="img/hero/hero-welcome-short.svg" alt="Добро пожаловать в Седону" width="229" height="156">
+            <img class="hero__image hero__image--catalog" src="img/hero/hero-welcome-short.svg"
+              alt="Добро пожаловать в Седону" width="229" height="156">
           </div>
           <h1 class="hero__title hero__title--catalog">Фото и видео</h1>
-          <p class="hero__slogan hero__slogan--catalog">Не можете решиться&nbsp;на&nbsp;путешествие из&#8209;за курса? Фотографии помогут вам
+          <p class="hero__slogan hero__slogan--catalog">Не можете решиться&nbsp;на&nbsp;путешествие из&#8209;за курса?
+            Фотографии помогут вам
             забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.</p>
         </header>
 
@@ -81,10 +100,13 @@
 
             <li class="photo-catalog__item photo-catalog__item--main card">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-1-desktop@1x.jpg 1x, img/catalog/catalog-photo-1-desktop@1x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-1-tablet@1x.jpg 1x, img/catalog/catalog-photo-1-tablet@2x.jpg 2x">
-                <img class="card__picture" src="img/catalog/catalog-photo-1-mobile@1x.jpg" srcset="img/catalog/catalog-photo-1-mobile@2x.jpg 2x"
-                  alt="Фотография бара в городе" width="320" height="260">
+                <source media="(min-width: 1200px)"
+                  srcset="img/catalog/catalog-photo-1-desktop@1x.jpg 1x, img/catalog/catalog-photo-1-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/catalog-photo-1-tablet@1x.jpg 1x, img/catalog/catalog-photo-1-tablet@2x.jpg 2x">
+                <img class="card__picture" src="img/catalog/catalog-photo-1-mobile@1x.jpg"
+                  srcset="img/catalog/catalog-photo-1-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
+                  height="260">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -95,7 +117,7 @@
                 </div>
                 <div class="card__ratings ratings">
                   <a class="ratings__toggle" href="javascript:void(0);">
-                    <svg class="ratings__icon" width="23" height="21">
+                    <svg class="ratings__icon" width="26" height="26">
                       <title>Поставить лайк</title>
                       <use href="img/sprite.svg#like-default"></use>
                     </svg>
@@ -108,10 +130,13 @@
 
             <li class="photo-catalog__item card">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-2-desktop@1x.jpg 1x, img/catalog/catalog-photo-2-desktop@1x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-2-tablet@1x.jpg 1x, img/catalog/catalog-photo-2-tablet@2x.jpg 2x">
-                <img class="card__picture" src="img/catalog/catalog-photo-2-mobile@1x.jpg" srcset="img/catalog/catalog-photo-2-mobile@2x.jpg 2x"
-                  alt="Фотография бара в городе" width="320" height="260">
+                <source media="(min-width: 1200px)"
+                  srcset="img/catalog/catalog-photo-2-desktop@1x.jpg 1x, img/catalog/catalog-photo-2-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/catalog-photo-2-tablet@1x.jpg 1x, img/catalog/catalog-photo-2-tablet@2x.jpg 2x">
+                <img class="card__picture" src="img/catalog/catalog-photo-2-mobile@1x.jpg"
+                  srcset="img/catalog/catalog-photo-2-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
+                  height="260">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -135,10 +160,13 @@
 
             <li class="photo-catalog__item card">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-3-desktop@1x.jpg 1x, img/catalog/catalog-photo-3-desktop@1x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-3-tablet@1x.jpg 1x, img/catalog/catalog-photo-3-tablet@2x.jpg 2x">
-                <img class="card__picture" src="img/catalog/catalog-photo-3-mobile@1x.jpg" srcset="img/catalog/catalog-photo-3-mobile@2x.jpg 2x"
-                  alt="Фотография бара в городе" width="320" height="260">
+                <source media="(min-width: 1200px)"
+                  srcset="img/catalog/catalog-photo-3-desktop@1x.jpg 1x, img/catalog/catalog-photo-3-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/catalog-photo-3-tablet@1x.jpg 1x, img/catalog/catalog-photo-3-tablet@2x.jpg 2x">
+                <img class="card__picture" src="img/catalog/catalog-photo-3-mobile@1x.jpg"
+                  srcset="img/catalog/catalog-photo-3-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
+                  height="260">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -162,10 +190,13 @@
 
             <li class="photo-catalog__item card">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-4-desktop@1x.jpg 1x, img/catalog/catalog-photo-4-desktop@1x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-4-tablet@1x.jpg 1x, img/catalog/catalog-photo-4-tablet@2x.jpg 2x">
-                <img class="card__picture" src="img/catalog/catalog-photo-4-mobile@1x.jpg" srcset="img/catalog/catalog-photo-4-mobile@2x.jpg 2x"
-                  alt="Фотография бара в городе" width="320" height="260">
+                <source media="(min-width: 1200px)"
+                  srcset="img/catalog/catalog-photo-4-desktop@1x.jpg 1x, img/catalog/catalog-photo-4-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog/catalog-photo-4-tablet@1x.jpg 1x, img/catalog/catalog-photo-4-tablet@2x.jpg 2x">
+                <img class="card__picture" src="img/catalog/catalog-photo-4-mobile@1x.jpg"
+                  srcset="img/catalog/catalog-photo-4-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
+                  height="260">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -194,14 +225,19 @@
           <p class="video-catalog__title">Всё еще сомневаетесь?</p>
           <p class="video-catalog__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
             очередной раз!</p>
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/catalog/video-poster-desktop@1x.jpg 1x, img/catalog/video-poster-desktop@1x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/video-poster-tablet@1x.jpg 1x, img/catalog/video-poster-tablet@2x.jpg 2x">
-            <img class="video-catalog__player-poster" src="img/catalog/video-poster-mobile@1x.jpg 1x" srcset="img/catalog/video-poster-mobile@2x.jpg 2x"
-              alt="Фотография бара в городе" width="320" height="260">
-          </picture>
-          <video class="video-catalog__player visually-hidden" src="https://9.react.pages.academy/static/film/video/traffic.mp4"
-            poster="img/catalog/video-poster-mobile@1x.jpg" controls></video>
+          <div class="video-catalog__player-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/catalog/video-poster-desktop@1x.jpg 1x, img/catalog/video-poster-desktop@1x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/catalog/video-poster-tablet@1x.jpg 1x, img/catalog/video-poster-tablet@2x.jpg 2x">
+              <img class="video-catalog__player-poster" src="img/catalog/video-poster-mobile@1x.jpg"
+                srcset="img/catalog/video-poster-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
+                height="260">
+            </picture>
+            <video class="video-catalog__player visually-hidden" src="https://9.react.pages.academy/static/film/video/traffic.mp4"
+              poster="img/catalog/video-poster-mobile@1x.jpg"></video>
+          </div>
         </section>
       </main>
 
