@@ -1,3 +1,56 @@
 .radio {
-  background-color: transparent;
+  position: relative;
+  display: block;
+  line-height: 46px;
+  text-transform: none;
+  font-size: @font-size-heading-small;
+  font-weight: 700;
+}
+
+.radio__input {
+  opacity: 0;
+
+  &:not(:checked) + span::after {
+    opacity: 0;
+  }
+
+  &:hover + span::before,
+  &:focus + span::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active + span::after,
+  &:disabled + span::after {
+    background-color: lighten(@check-mark-color, 30%);
+  }
+}
+
+.radio span {
+  position: relative;
+  padding-left: 36px;
+  @radio-box-size: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: @radio-box-size;
+    height: @radio-box-size;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    left: -26px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: @check-mark-color;
+    border-radius: 50%;
+    left: calc(@radio-box-size/2 - 26px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
 }

@@ -1,29 +1,104 @@
 .advantage-box {
-  .common-box();
-  display: block;
   background-color: @bg-color-lightgray;
-  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 120px;
 
-  &--color {
-    color: #ffffff;
-    background-color: @bg-color-blue;
+  @media @tablet {
+    min-height: 256px;
+  }
+}
+
+.advantage-box--color {
+  color: #ffffff;
+  background-color: @bg-color-blue;
+
+  & .advantage-box__title {
+    padding-top: 42px;
+
+    @media @desktop {
+      padding-top: 48px;
+    }
   }
 
-  &--curved {
-    padding-top: 54px;
-    background-image: url("../img/shapes/box-triangle.svg");
-    background-size: contain;
-    background-position: 0 -16px;
-    background-repeat: no-repeat;
-    background-origin: border-box;
+  & .advantage-box__description {
+    padding-bottom: 33px;
+    border: none;
+  }
+}
+
+.advantages__item {
+  &:first-of-type .advantage-box__title {
+    padding-top: 72px;
+
+    @media @tablet {
+      padding-top: 41px;
+    }
+
+    @media @desktop {
+      padding-top: 48px;
+    }
+  }
+
+  &:first-of-type .advantage-box__description {
+    padding-bottom: 40px;
+  }
+
+  &:last-of-type .advantage-box__description {
+    border: none;
+  }
+}
+
+.advantage-box__title {
+  font-size: @font-size-heading-small;
+  margin-top: 0;
+  margin-bottom: 14px;
+  padding-top: 29px;
+
+  @media @tablet {
+    .heading(middle);
+    padding-top: 41px;
+  }
+
+  @media @desktop {
+    .heading(middle);
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  & br {
+    @media @mobile {
+      display: none;
+    }
   }
 }
 
 .advantage-box__number {
-  padding-top: 11px;
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  @media @tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .advantage-box__description {
-  padding-top: 17px;
-  padding-bottom: 40px;
+  margin: 0;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #d6d6d6;
+
+  @media @tablet {
+    border: none;
+
+    & br {
+      display: none;
+    }
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media @desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

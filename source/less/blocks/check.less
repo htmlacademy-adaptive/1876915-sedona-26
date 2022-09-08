@@ -1,3 +1,56 @@
 .check {
-  background-color: transparent;
+  position: relative;
+  line-height: 46px;
+  text-transform: none;
+  font-size: @font-size-heading-small;
+  font-weight: 700;
+}
+
+.check-box__input {
+  opacity: 0;
+
+  &:not(:checked) + span::after {
+    opacity: 0;
+  }
+
+
+  &:hover + span::before,
+  &:focus + span::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active + span::after,
+  &:disabled + span::after {
+    border-color: lighten(@check-mark-color, 30%);
+  }
+}
+
+.check span {
+  position: relative;
+  padding-left: 37px;
+  @check-box-size: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: @check-box-size;
+    height: @check-box-size;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 16px;
+    border-right: 3px solid @check-mark-color;
+    border-bottom: 3px solid @check-mark-color;
+    left: calc(@check-box-size/2 - 25px);
+    top: 50%;
+    transform: translateY(-75%) translateX(-50%) rotate(45deg);
+  }
 }

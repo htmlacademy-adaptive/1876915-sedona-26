@@ -1,13 +1,39 @@
 .main-header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 56px;
+  z-index: 1;
 }
 
 .main-header__logo {
+  display: block;
   position: absolute;
-  align-self: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50.2%);
+  width: 185px;
+  height: 96px;
 
   @media @tablet {
     z-index: 1;
   }
+}
+
+.main-header--no-js .main-header__logo {
+  @media @mobile {
+    position: static;
+    transform: none;
+    order: 2;
+  }
+}
+
+.main-header__area {
+  .visually-hidden();
+}
+
+.main-header__img {
+  width: 100%;
+  height: auto;
 }

@@ -1,16 +1,21 @@
 .main-nav {
   position: relative;
+  width: 100%;
 }
 
-.main-nav__menu {
+.main-nav__list {
+  display: block;
   position: absolute;
   width: 100%;
-  background-color: @bg-color-blue;
   padding-left: 0;
-  margin-top: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: @bg-color-blue;
 
   @media @tablet {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "a b ... c d";
     background-color: @bg-color-white;
   }
 
@@ -21,92 +26,139 @@
   }
 }
 
-.main-nav__list {
-  width: 100%;
-  padding-left: 0;
-  margin: 0;
-  list-style-type: none;
-
-  @media @tablet {
-    display: flex;
-    justify-content: stretch;
-    background-color: @bg-color-white;
-  }
+.main-header--no-js .main-nav__list {
+  position: static;
 }
 
 .main-nav__item {
-  min-height: 55px;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  min-height: 56px;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
 
   @media @tablet {
-    flex-grow: 1;
-    box-shadow: none;
+    border: none;
 
-    .main-nav__list--first &:last-child {
-      margin-right: 93px;
+    &:nth-child(n+1) {
+      grid-area: a;
     }
 
-    .main-nav__list--second &:first-child {
-      margin-left: 92px;
+    &:nth-child(n+2) {
+      grid-area: b;
+    }
+
+    &:nth-child(n+3) {
+      grid-area: c;
+    }
+
+    &:nth-child(n+4) {
+      grid-area: d;
+    }
+  }
+
+  &:hover {
+    @media @mobile {
+      background-color: #669ec0;
+    }
+  }
+
+  &:active {
+    @media @mobile {
+      background-color: #5496bd;
+    }
+  }
+
+  &:last-child {
+    @media @mobile {
+      box-shadow: inset 0 -10px 10px -5px rgba(1, 1, 1, 0.2);
     }
   }
 }
-
-// .main-nav__item--active{
-
-// }
 
 .main-nav__link {
   .heading();
   display: block;
-  width: 100%;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  line-height: 59px;
+  word-break: break-word;
   text-decoration: none;
   color: @bg-color-white;
 
   @media @tablet {
     color: #000000;
+    line-height: 56px;
+    font-size: @font-size-regular;
+  }
+}
+
+.main-nav__item--active .main-nav__link {
+  @media @tablet {
+    color: #766357;
   }
 }
 
 .main-nav__button {
-  min-height: 55px;
-  width: 23px;
   display: block;
   position: absolute;
+  padding: 0;
+  height: 56px;
+  width: 56px;
   z-index: 1;
-  right: 18px;
-  border: none;
-  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
   background-color: transparent;
-  background-position: center center;
-  background-size: contain;
+  border: none;
   cursor: pointer;
 
-  background-image: url("../img/nav-button/menu-close.svg");
-
-  &:hover {
-    background-image: url("../img/nav-button/menu-close-hover.svg");
+  &--closed::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 23px;
+    top: 18px;
+    right: 50%;
+    transform: translateX(34%);
+    background-color: @bg-color-blue;
+    box-shadow: 0 8px 0 0 @bg-color-blue, 0 16px 0 0 @bg-color-blue;
   }
 
-  &:active {
-    background-image: url("../img/nav-button/menu-close-down.svg");
+  &--closed:hover::before {
+    opacity: 0.6;
   }
 
-  &--open {
-    background-image: url("../img/nav-button/menu-open.svg");
+  &--closed:active::before {
+    opacity: 0.3;
   }
 
-  &--open:hover {
-    background-image: url("../img/nav-button/menu-open-hover.svg");
+  &--opened:hover::before,
+  &--opened:hover::after {
+    background-color: lighten(@bg-color-blue, 20%);
   }
 
-  &--open:active {
-    background-image: url("../img/nav-button/menu-open-down.svg");
+  &--opened:active::before,
+  &--opened:active::after {
+    background-color: lighten(@bg-color-blue, 10%);
+  }
+
+  &--opened::before,
+  &--opened::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 28px;
+    top: 50%;
+    right: 50%;
+    background-color: @bg-color-white;
+  }
+
+  &--opened::before {
+    transform: translateX(38%) translateY(-50%) rotate(45deg);
+  }
+
+  &--opened::after {
+    transform: translateX(38%) translateY(-50%) rotate(-45deg);
   }
 
   @media @tablet {
-    .visually-hidden();
+    display: none;
   }
 }

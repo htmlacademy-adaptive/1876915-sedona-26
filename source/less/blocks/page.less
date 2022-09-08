@@ -6,24 +6,34 @@
   font-variant: normal;
   font-size: @font-size-regular;
   line-height: @line-height-regular;
-  background-color: @bg-color-white;
-  min-width: 320px;
   min-height: 100%;
+  width: 100%;
 }
 
 .page__body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  @media @desktop {
+    background-color: #f2f2f2;
+  }
+}
+
+.page__body-wrapper {
   display: flex;
   flex-direction: column;
-  overflow: visible;
-  position: relative;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: normal;
   margin: 0 auto;
   padding: 0;
   height: 100%;
+  width: 100%;
+  min-width: 320px;
   max-width: 1200px;
+  background-color: @bg-color-white;
 
   @media @desktop {
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
@@ -32,9 +42,14 @@
 
 //todo: delete
 * {
+  overflow-wrap: break-word;
   // margin: 0;
   // padding: 0;
   // background-color: aquamarine;
-  border: 1px solid rgba(71, 86, 255, 0.2);
+  // outline: 1px solid rgba(71, 86, 255, 0.2);
   // border: none;
+}
+
+svg {
+  background-color: #e6e6e6;
 }

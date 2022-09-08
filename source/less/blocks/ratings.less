@@ -1,3 +1,20 @@
 .ratings {
-  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  @media @tablet {
+    justify-self: end;
+  }
+}
+
+.ratings__toggle {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.ratings__counter {
+  margin: 0;
+  margin-left: 11px;
 }
