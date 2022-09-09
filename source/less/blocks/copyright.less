@@ -3,21 +3,42 @@
   justify-content: space-between;
   align-items: center;
   width: 130px;
+  color: #000000;
+}
+
+.copyright:hover {
+  & .copyright__text {
+    color: @bg-color-blue;
+  }
+
+  & .copyright__academy-icon {
+    fill: @bg-color-blue;
+  }
+}
+
+.copyright:active {
+  & .copyright__text {
+    color: #b3b3b3;
+  }
+
+  & .copyright__academy-icon {
+    fill: #b3b3b3;
+  }
 }
 
 .copyright__text {
   display: inline-block;
   margin: 0;
+  margin-right: 6px;
 }
 
 .copyright__link {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 35px;
+  height: 35px;
 }
 
 .copyright__academy-icon {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  background-color: transparent;
 }

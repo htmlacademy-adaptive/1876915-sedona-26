@@ -24,7 +24,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script type="module" src="js/main.js"></script>
 
     <!-- Pixel Glass -->
@@ -52,8 +52,8 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
   </head>
 
   <body class="page__body">
@@ -84,8 +84,11 @@
         <header class="hero">
           <h2 class="visually-hidden">Информация о городе</h2>
           <div class="hero__image-wrapper">
-            <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282"
-              height="385">
+            <!-- <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282"
+              height="385"> -->
+              <svg class="hero__image" viewBox="0 0 282 214" width="282" height="385" role="img" aria-label="Город Седона">
+                <use href="img/sprites/sprite.svg#hero"></use>
+              </svg>
           </div>
           <p class="hero__title">Седона &mdash; небольшой городок&nbsp;в&nbsp;Аризоне, <br>заслуживающий большего!</p>
         </header>
@@ -101,6 +104,9 @@
                 <p class="advantage-box__description">Cедона не аттракцион для туристов, <br>там&nbsp;течет&nbsp;своя жизнь</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.webp 1x, img/advantages/advantage-picture-city-desktop@1x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/advantage-picture-city-tablet@1x.webp 1x, img/advantages/advantage-picture-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/advantage-picture-city-mobile@1x.webp 1x, img/advantages/advantage-picture-city-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.jpg 1x, img/advantages/advantage-picture-city-desktop@1x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/advantages/advantage-picture-city-tablet@1x.jpg 1x, img/advantages/advantage-picture-city-tablet@2x.jpg 2x">
                 <img class="advantages__picture" src="img/advantages/advantage-picture-city-mobile@1x.jpg" srcset="img/advantages/advantage-picture-city-mobile@2x.jpg 2x"
@@ -128,6 +134,9 @@
                 <p class="advantage-box__description">Да, по нему можно пройти! Если&nbsp;вы осмелитесь,&nbsp;конечно</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.webp 1x, img/advantages/advantage-picture-canyon-desktop@1x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/advantage-picture-canyon-tablet@1x.webp 1x, img/advantages/advantage-picture-canyon-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/advantage-picture-canyon-mobile@1x.webp 1x, img/advantages/advantage-picture-canyon-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.jpg 1x, img/advantages/advantage-picture-canyon-desktop@1x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/advantages/advantage-picture-canyon-tablet@1x.jpg 1x, img/advantages/advantage-picture-canyon-tablet@2x.jpg 2x">
                 <img class="advantages__picture" src="img/advantages/advantage-picture-canyon-mobile@1x.jpg" srcset="img/advantages/advantage-picture-canyon-mobile@2x.jpg 2x"
@@ -174,34 +183,34 @@
         <ul class="footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
-              <svg class="social-list__icon social-list__icon--vk" width="48" height="48">
-                <use href="img/sprite.svg#vk-default"></use>
+              <svg class="social-list__icon social-list__icon--vk" viewBox="0 0 24 24" width="24" height="24">
+                <use href="img/sprites/sprite.svg#vk"></use>
               </svg>
               <span class="visually-hidden">Мы в Вконтакте</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" title="Мы в Ютубе">
-              <svg class="social-list__icon social-list__icon--youtube" width="48" height="48">
-                <use href="img/sprite.svg#youtube"></use>
+            <a class="social-list__link" href="https://t.me/htmlacademy" title="Мы в Телеграме">
+              <svg class="social-list__icon social-list__icon--telegram" viewBox="0 0 24 24" width="24" height="24">
+                <use href="img/sprites/sprite.svg#telegram"></use>
               </svg>
-              <span class="visually-hidden">Мы в Ютубе</span>
+              <span class="visually-hidden">Мы в Телеграме</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="https://t.me/htmlacademy" title="Мы в Телеграме">
-              <svg class="social-list__icon social-list__icon--telegram" width="48" height="48">
-                <use href="img/sprite.svg#telegram-default"></use>
+            <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" title="Мы в Ютубе">
+              <svg class="social-list__icon social-list__icon--youtube" viewBox="0 0 24 24" width="24" height="24">
+                <use href="img/sprites/sprite.svg#youtube"></use>
               </svg>
-              <span class="visually-hidden">Мы в Телеграме</span>
+              <span class="visually-hidden">Мы в Ютубе</span>
             </a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
           <p class="copyright__text">Разработано:</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__academy-icon" width="48" height="48">
-              <use href="img/sprite.svg#htmlacademy"></use>
+            <svg class="copyright__academy-icon" viewBox="0 0 32 32" width="35" height="35">
+              <use href="img/sprites/sprite.svg#htmlacademy"></use>
             </svg>
             <span class="visually-hidden">HTML Academy</span>
           </a>
