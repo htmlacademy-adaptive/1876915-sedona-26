@@ -39,7 +39,7 @@
 }
 
 .card__description {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
   @media @tablet {
     margin-bottom: 15px;
@@ -57,5 +57,41 @@
 }
 
 .card__ratings {
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+
+  @media @tablet {
+    justify-self: end;
+    margin-top: 5px;
+  }
+}
+
+.card__like {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.card__likes-counter {
+  font-weight: 700;
+  margin: 0;
+  margin-left: 5px;
+
+  @media @tablet {
+    margin-left: 0;
+  }
+}
+
+.card__like-icon {
+  display: block;
+  fill: #000000;
+  opacity: 0.3;
+  background-color: transparent;
+
+  @media @desktop {
+    opacity: 1;
+    fill: @bg-color-white;
+  }
 }
