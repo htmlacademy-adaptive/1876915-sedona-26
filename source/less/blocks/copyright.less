@@ -1,15 +1,15 @@
 .copyright {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
   width: 130px;
   color: #000000;
 }
 
 .copyright:hover {
-  & .copyright__text {
-    color: @bg-color-blue;
-  }
+  color: @bg-color-blue;
 
   & .copyright__academy-icon {
     fill: @bg-color-blue;
@@ -17,28 +17,19 @@
 }
 
 .copyright:active {
-  & .copyright__text {
-    color: #b3b3b3;
-  }
+  color: #b3b3b3;
 
   & .copyright__academy-icon {
     fill: #b3b3b3;
   }
 }
 
-.copyright__text {
-  display: inline-block;
-  margin: 0;
-  margin-right: 6px;
-}
-
-.copyright__link {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-}
-
 .copyright__academy-icon {
   display: inline-block;
   background-color: transparent;
+  min-width: 35px;
+  height: 35px;
+  margin: 0;
+  margin-bottom: 3px;
+  margin-left: 6px;
 }

@@ -88,6 +88,24 @@
     line-height: 56px;
     font-size: @font-size-regular;
   }
+
+  &:hover {
+    @media @tablet {
+      color: @bg-color-blue;
+    }
+  }
+
+  &:active {
+    @media @tablet {
+      color: #b3b3b3;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    color: #b3b3b3;
+  }
 }
 
 .main-nav__item--active .main-nav__link {

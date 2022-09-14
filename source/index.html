@@ -20,10 +20,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.min.css">
     <script type="module" src="js/main.js"></script>
 
@@ -33,14 +34,14 @@
         background-repeat: no-repeat;
         background-position: 50% 0;
         /* Mobile layout by default */
-        background-image: url("img/mocks/index/Mobile.png");
+        background-image: url("mocks/index/mobile.png");
       }
 
       /* Tablet */
       @media (min-width: 768px) {
         html {
           /* Tablet layout */
-          background-image: url("img/mocks/index/Tablet.png");
+          background-image: url("mocks/index/tablet.png");
         }
       }
 
@@ -48,12 +49,12 @@
       @media (min-width: 1200px) {
         html {
           /* Desktop layout */
-          background-image: url("img/mocks/index/Desktop.png");
+          background-image: url("mocks/index/desktop.png");
         }
       }
     </style>
-    <link rel="stylesheet" href="css/pixel-glass.css">
-    <script src="js/pixel-glass.js"></script>
+    <link rel="stylesheet" href="mocks/pixel-glass.css">
+    <script type="module" src="mocks/pixel-glass.js"></script>
   </head>
 
   <body class="page__body">
@@ -84,11 +85,8 @@
         <header class="hero">
           <h2 class="visually-hidden">Информация о городе</h2>
           <div class="hero__image-wrapper">
-            <!-- <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282"
-              height="385"> -->
-              <svg class="hero__image" viewBox="0 0 282 214" width="282" height="385" role="img" aria-label="Город Седона">
-                <use href="img/sprites/sprite.svg#hero"></use>
-              </svg>
+            <img class="hero__image" src="img/hero/hero-welcome-full.svg" alt="Добро пожаловать в Седону" width="282"
+              height="385">
           </div>
           <p class="hero__title">Седона &mdash; небольшой городок&nbsp;в&nbsp;Аризоне, <br>заслуживающий большего!</p>
         </header>
@@ -101,13 +99,13 @@
               <div class="advantage-box advantage-box--color">
                 <h3 class="advantage-box__title">Настоящий городок</h3>
                 <p class="advantage-box__number">&mdash; №1 &mdash;</p>
-                <p class="advantage-box__description">Cедона не аттракцион для туристов, <br>там&nbsp;течет&nbsp;своя жизнь</p>
+                <p class="advantage-box__description">Cедона не аттракцион для туристов, <br class="advantages__br advantages__br--non-tablet">&nbsp;там&nbsp;течет&nbsp;своя жизнь</p>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.webp 1x, img/advantages/advantage-picture-city-desktop@1x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.webp 1x, img/advantages/advantage-picture-city-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/advantage-picture-city-tablet@1x.webp 1x, img/advantages/advantage-picture-city-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/advantages/advantage-picture-city-mobile@1x.webp 1x, img/advantages/advantage-picture-city-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.jpg 1x, img/advantages/advantage-picture-city-desktop@1x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-city-desktop@1x.jpg 1x, img/advantages/advantage-picture-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/advantages/advantage-picture-city-tablet@1x.jpg 1x, img/advantages/advantage-picture-city-tablet@2x.jpg 2x">
                 <img class="advantages__picture" src="img/advantages/advantage-picture-city-mobile@1x.jpg" srcset="img/advantages/advantage-picture-city-mobile@2x.jpg 2x"
                 alt="Фотография бара в городе" width="320" height="260">
@@ -115,7 +113,7 @@
                 <ul class="advantages__sub-list">
                 <li class="advantages__sub-item advantages__sub-item--home">
                   <p class="advantages__sub-title">Жилье</p>
-                  <p class="advantages__sub-description">Рекомендуем пожить в настоящем мотеле, все как&nbsp;в&nbsp;кино!</p>
+                  <p class="advantages__sub-description">Рекомендуем пожить в настоящем мотеле, все как&nbsp;в кино!</p>
                 </li>
                 <li class="advantages__sub-item advantages__sub-item--food">
                   <p class="advantages__sub-title">Еда</p>
@@ -123,7 +121,7 @@
                 </li>
                 <li class="advantages__sub-item advantages__sub-item--souvenirs">
                   <p class="advantages__sub-title">Сувениры</p>
-                  <p class="advantages__sub-description">Не только китайского, но и&nbsp;местного&nbsp;производства!</p>
+                  <p class="advantages__sub-description">Не только китайского, <br class="advantages__br advantages__br--non-tablet"> &nbsp;но и местного&nbsp;производства!</p>
                 </li>
               </ul>
             </li>
@@ -131,32 +129,32 @@
               <div class="advantage-box advantage-box--color">
                 <h3 class="advantage-box__title">Там есть мост&nbsp;дьявола</h3>
                 <p class="advantage-box__number">&mdash; №2 &mdash;</p>
-                <p class="advantage-box__description">Да, по нему можно пройти! Если&nbsp;вы осмелитесь,&nbsp;конечно</p>
+                <p class="advantage-box__description">Да,&nbsp;по нему можно пройти! <br class="advantages__br advantages__br--desktop"> Если&nbsp;вы осмелитесь,&nbsp;конечно</p>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.webp 1x, img/advantages/advantage-picture-canyon-desktop@1x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.webp 1x, img/advantages/advantage-picture-canyon-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/advantage-picture-canyon-tablet@1x.webp 1x, img/advantages/advantage-picture-canyon-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/advantages/advantage-picture-canyon-mobile@1x.webp 1x, img/advantages/advantage-picture-canyon-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.jpg 1x, img/advantages/advantage-picture-canyon-desktop@1x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/advantages/advantage-picture-canyon-desktop@1x.jpg 1x, img/advantages/advantage-picture-canyon-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/advantages/advantage-picture-canyon-tablet@1x.jpg 1x, img/advantages/advantage-picture-canyon-tablet@2x.jpg 2x">
                 <img class="advantages__picture" src="img/advantages/advantage-picture-canyon-mobile@1x.jpg" srcset="img/advantages/advantage-picture-canyon-mobile@2x.jpg 2x"
                   alt="Фотография бара в городе" width="320" height="260">
               </picture>
             </li>
             <li class="advantages__item advantage-box">
-              <h3 class="advantage-box__title">Небольшая <br>площадь</h3>
+              <h3 class="advantage-box__title">Небольшая <br>&nbsp;площадь</h3>
               <p class="advantage-box__number">&mdash; №3 &mdash;</p>
               <p class="advantage-box__description">Все интересные места находятся очень близко</p>
             </li>
             <li class="advantages__item advantage-box">
-              <h3 class="advantage-box__title">Красивая <br>дорога</h3>
+              <h3 class="advantage-box__title">Красивая <br>&nbsp;дорога</h3>
               <p class="advantage-box__number">&mdash; №4 &mdash;</p>
-              <p class="advantage-box__description">Ехать&nbsp;в&nbsp;Седону&nbsp;из Лас&#8209;Вегаса&nbsp;совсем не&nbsp;скучно!</p>
+              <p class="advantage-box__description">Ехать&nbsp;в&nbsp;Седону&nbsp;из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
             </li>
             <li class="advantages__item advantage-box">
-              <h3 class="advantage-box__title">Мало <br>туристов</h3>
+              <h3 class="advantage-box__title">Мало <br>&nbsp;туристов</h3>
               <p class="advantage-box__number">&mdash; №5 &mdash;</p>
-              <p class="advantage-box__description">Большинство едет в гранд каньон и&nbsp;толпится там</p>
+              <p class="advantage-box__description">Большинство едет в гранд каньон и толпится там</p>
             </li>
           </ol>
         </section>
@@ -206,15 +204,12 @@
             </a>
           </li>
         </ul>
-        <div class="footer__copyright copyright">
-          <p class="copyright__text">Разработано:</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__academy-icon" viewBox="0 0 32 32" width="35" height="35">
-              <use href="img/sprites/sprite.svg#htmlacademy"></use>
-            </svg>
-            <span class="visually-hidden">HTML Academy</span>
-          </a>
-        </div>
+        <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано:
+          <svg class="copyright__academy-icon" viewBox="0 0 32 32" width="35" height="35">
+            <use href="img/sprites/sprite.svg#htmlacademy"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </footer>
     </div>
   </body>
