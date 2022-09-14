@@ -44,13 +44,13 @@ const scripts = () => {
 
 // Images
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,jpeg,png}')
+  return gulp.src(['source/img/**/*.{jpg,jpeg,png}','!source/mocks/**/*'])
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
 
 const imagesWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,jpeg,png}')
+  return gulp.src(['source/img/**/*.{jpg,jpeg,png}','!source/mocks/**/*'])
     .pipe(squoosh({ webp: {} }))
     .pipe(gulp.dest('build/img'));
 }
@@ -65,29 +65,38 @@ const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*'])
     .pipe(svgo({
       js2svg: {
-        pretty: true,
-        indent: 4,
-      }
+        indent: 4
+      },
+      plugins: [
+        {
+          removeViewBox: false,
+        }
+      ],
     }))
     .pipe(gulp.dest('build/img'));
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo({
       js2svg: {
-        pretty: true
-      }
+        indent: 4
+      },
+      plugins: [
+        {
+          removeViewBox: false
+        }
+      ],
     }))
     .pipe(cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
-        // $('[style]').removeAttr('style');
+        $('[style]').removeAttr('style');
       },
       parserOptions: { xmlMode: true }
     }))
-    .pipe(svgstore({ inlineSvg: true, cleanDefs: true, cleanSymbols: true, svgAttrs: { fill: 'currentColor' } }))
+    .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img/sprites'));
 }
@@ -106,8 +115,7 @@ const copyFiles = () => {
 const copyDevFiles = () => {
   copyFiles();
   return gulp.src([
-    'source/css/pixel-glass.css',
-    'source/js/pixel-glass.js'
+    'source/mocks/**/*.*'
   ], { base: 'source' })
     .pipe(gulp.dest('build'));
 }
@@ -140,7 +148,7 @@ const reload = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/**/*.js', gulp.series(scripts));
+  gulp.watch('source/js/**/*.js', gulp.series(scripts, reload));
   gulp.watch('source/*.{html,js}').on('change', gulp.series(html, reload));
 }
 
@@ -155,7 +163,8 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
-    copyFiles
+    copyFiles,
+    copyDevFiles  // Для доступности pixel-glass проверяющему наставнику
   )
 );
 

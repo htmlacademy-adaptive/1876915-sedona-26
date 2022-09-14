@@ -1,10 +1,10 @@
 .advantage-box {
   background-color: @bg-color-lightgray;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 32px;
   min-height: 120px;
 
   @media @tablet {
+    padding: 0 40px;
     min-height: 256px;
   }
 }
@@ -12,6 +12,11 @@
 .advantage-box--color {
   color: #ffffff;
   background-color: @bg-color-blue;
+  padding: 0 20px;
+
+  @media @tablet {
+    padding: 0 32px;
+  }
 
   & .advantage-box__title {
     padding-top: 42px;
@@ -53,7 +58,7 @@
   font-size: @font-size-heading-small;
   margin-top: 0;
   margin-bottom: 14px;
-  padding-top: 29px;
+  padding-top: 30px;
 
   @media @tablet {
     .heading(middle);
@@ -61,7 +66,8 @@
   }
 
   @media @desktop {
-    .heading(middle);
+    line-height: 28px;
+    margin-bottom: 11px;
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -89,16 +95,25 @@
 
   @media @tablet {
     border: none;
+  }
+}
 
-    & br {
+.advantages__br {
+  &--non-tablet {
+    @media @tablet {
       display: none;
     }
-    padding-left: 20px;
-    padding-right: 20px;
+
+    @media @desktop {
+      display: block;
+    }
   }
 
-  @media @desktop {
-    padding-left: 20px;
-    padding-right: 20px;
+  &--desktop {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
   }
 }

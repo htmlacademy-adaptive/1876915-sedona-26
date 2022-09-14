@@ -43,6 +43,7 @@
 
 .advantages__sub-list {
   padding: 20px;
+  padding-bottom: 22px;
   list-style-type: none;
 
   @media @tablet {
@@ -60,7 +61,7 @@
 
   @media @tablet {
     text-align: center;
-    padding: 20px;
+    padding: 20px 32px;
   }
 
   @media @desktop {
@@ -116,7 +117,7 @@
 
 .advantages__sub-description {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @media @tablet {
     margin-bottom: 40px;
@@ -124,6 +125,14 @@
 
   @media @desktop {
     margin-bottom: 60px;
+  }
+
+  & br {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
   }
 }
 

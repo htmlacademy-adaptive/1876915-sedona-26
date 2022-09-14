@@ -20,15 +20,13 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.min.css">
     <script type="module" src="js/main.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pixel-glass.css">
-    <script src="js/pixel-glass.js"></script>
 
     <!-- Pixel Glass -->
     <style>
@@ -36,14 +34,18 @@
         background-repeat: no-repeat;
         background-position: 50% 0;
         /* Mobile layout by default */
-        background-image: url("img/mocks/form/Mobile.png");
+        background-image: url("mocks/form/mobile.png");
+        /* background-image: url("mocks/form/modal-success-mobile.png"); */
+        /* background-image: url("mocks/form/modal-failure-mobile.png"); */
       }
 
       /* Tablet */
       @media (min-width: 768px) {
         html {
           /* Tablet layout */
-          background-image: url("img/mocks/form/Tablet.png");
+          background-image: url("mocks/form/tablet.png");
+          /* background-image: url("mocks/form/modal-success-tablet.png"); */
+          /* background-image: url("mocks/form/modal-failure-tablet.png"); */
         }
       }
 
@@ -51,12 +53,12 @@
       @media (min-width: 1200px) {
         html {
           /* Desktop layout */
-          background-image: url("img/mocks/form/Desktop.png");
+          background-image: url("mocks/form/desktop.png");
         }
       }
     </style>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="mocks/pixel-glass.css">
+    <script type="module" src="mocks/pixel-glass.js"></script>
   </head>
 
   <body class="page__body">
@@ -216,40 +218,43 @@
             </a>
           </li>
         </ul>
-        <div class="footer__copyright copyright">
-          <p class="copyright__text">Разработано:</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__academy-icon" viewBox="0 0 32 32" width="35" height="35">
-              <use href="img/sprites/sprite.svg#htmlacademy"></use>
-            </svg>
-            <span class="visually-hidden">HTML Academy</span>
-          </a>
-        </div>
+        <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано:
+          <svg class="copyright__academy-icon" viewBox="0 0 32 32" width="35" height="35">
+            <use href="img/sprites/sprite.svg#htmlacademy"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </footer>
 
-      <!-- <section class="form-modal visually-hidden">
-        <div class="form-modal__error">
-          <div class="form-modal__description">
-            <h2 class="form-modal__title">Что-то пошло не так</h2>
-            <p class="form-modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          </div>
-          <button class="form-modal__button button" type="button">Отправить отзыв</button>
-        </div>
+    <!-- Сообщение об успешном создании объявления -->
+    <template class="modal-success">
+      <div class="form-modal" hidden>
         <div class="form-modal__success">
           <div class="form-modal__description">
             <h2 class="form-modal__title">Ваш&nbsp;отзыв&nbsp;отправлен!</h2>
-            <p class="form-modal__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+            <p class="form-modal__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>В ближайшее время мы
               опубликуем его на сайте.</p>
           </div>
           <div class="form-modal__button-wrapper ">
             <button class="form-modal__button button" type="button">Закрыть окно</button>
           </div>
         </div>
-      </section> -->
+      </div>
+    </template>
 
-      <!-- <template class="form-modal-template">
-    </template> -->
-    </div>
+    <!-- Сообщение об ошибке создания объявления -->
+    <template class="modal-error">
+      <div class="form-modal" hidden>
+        <div class="form-modal__error" >
+          <div class="form-modal__description">
+            <h2 class="form-modal__title">Что-то пошло не так!</h2>
+            <p class="form-modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          </div>
+          <button class="form-modal__button button" type="button">Ок</button>
+        </div>
+      </div>
+    </template>
+
   </body>
 
 </html>
