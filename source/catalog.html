@@ -25,6 +25,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script type="module" src="js/main.js"></script>
 
@@ -34,14 +38,14 @@
         background-repeat: no-repeat;
         background-position: 50% 0;
         /* Mobile layout by default */
-        background-image: url("mocks/catalog/Mobile.png");
+        background-image: url("mocks/catalog/mobile.png");
       }
 
       /* Tablet */
       @media (min-width: 768px) {
         html {
           /* Tablet layout */
-          background-image: url("mocks/catalog/Tablet.png");
+          background-image: url("mocks/catalog/tablet.png");
         }
       }
 
@@ -49,7 +53,7 @@
       @media (min-width: 1200px) {
         html {
           /* Desktop layout */
-          background-image: url("mocks/catalog/Desktop.png");
+          background-image: url("mocks/catalog/desktop.png");
         }
       }
     </style>
@@ -105,7 +109,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-1-tablet@1x.jpg 1x, img/catalog/catalog-photo-1-tablet@2x.jpg 2x">
                 <img class="card__picture" src="img/catalog/catalog-photo-1-mobile@1x.jpg"
                   srcset="img/catalog/catalog-photo-1-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
-                  height="260">
+                  height="260" loading="lazy">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -116,7 +120,7 @@
                 </div>
                 <div class="card__ratings">
                   <a class="card__like" href="javascript:void(0);">
-                    <svg class="card__like-icon" viewBox="0 0 32 32" width="34" height="34">
+                    <svg class="card__like-icon" viewBox="0 0 22 20" width="23" height="23">
                       <title>Поставить лайк</title>
                       <use href="img/sprites/sprite.svg#like"></use>
                     </svg>
@@ -136,7 +140,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-2-tablet@1x.jpg 1x, img/catalog/catalog-photo-2-tablet@2x.jpg 2x">
                 <img class="card__picture" src="img/catalog/catalog-photo-2-mobile@1x.jpg"
                   srcset="img/catalog/catalog-photo-2-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
-                  height="260">
+                  height="260" loading="lazy">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -147,7 +151,7 @@
                 </div>
                 <div class="card__ratings">
                   <a class="card__like" href="javascript:void(0);">
-                    <svg class="card__like-icon" viewBox="0 0 32 32" width="32" height="32">
+                    <svg class="card__like-icon" viewBox="0 0 22 20" width="23" height="23">
                       <title>Поставить лайк</title>
                       <use href="img/sprites/sprite.svg#like"></use>
                     </svg>
@@ -167,7 +171,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-3-tablet@1x.jpg 1x, img/catalog/catalog-photo-3-tablet@2x.jpg 2x">
                 <img class="card__picture" src="img/catalog/catalog-photo-3-mobile@1x.jpg"
                   srcset="img/catalog/catalog-photo-3-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
-                  height="260">
+                  height="260" loading="lazy">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -178,7 +182,7 @@
                 </div>
                 <div class="card__ratings">
                   <a class="card__like" href="javascript:void(0);">
-                    <svg class="card__like-icon" viewBox="0 0 32 32" width="32" height="32">
+                    <svg class="card__like-icon" viewBox="0 0 22 20" width="23" height="23">
                       <title>Поставить лайк</title>
                       <use href="img/sprites/sprite.svg#like"></use>
                     </svg>
@@ -198,7 +202,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog/catalog-photo-4-tablet@1x.jpg 1x, img/catalog/catalog-photo-4-tablet@2x.jpg 2x">
                 <img class="card__picture" src="img/catalog/catalog-photo-4-mobile@1x.jpg"
                   srcset="img/catalog/catalog-photo-4-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
-                  height="260">
+                  height="260" loading="lazy">
               </picture>
               <div class="card__under-picture">
                 <div class="card__description">
@@ -209,7 +213,7 @@
                 </div>
                 <div class="card__ratings">
                   <a class="card__like" href="javascript:void(0);">
-                    <svg class="card__like-icon" viewBox="0 0 32 32" width="32" height="32">
+                    <svg class="card__like-icon" viewBox="0 0 22 20" width="23" height="23">
                       <title>Поставить лайк</title>
                       <use href="img/sprites/sprite.svg#like"></use>
                     </svg>
@@ -236,7 +240,7 @@
               <source media="(min-width: 768px)" srcset="img/catalog/video-poster-tablet@1x.jpg 1x, img/catalog/video-poster-tablet@2x.jpg 2x">
               <img class="video-catalog__player-poster" src="img/catalog/video-poster-mobile@1x.jpg"
                 srcset="img/catalog/video-poster-mobile@2x.jpg 2x" alt="Фотография бара в городе" width="320"
-                height="260">
+                height="260" loading="lazy">
             </picture>
             <video class="video-catalog__player visually-hidden" src="https://9.react.pages.academy/static/film/video/traffic.mp4"></video>
           </div>

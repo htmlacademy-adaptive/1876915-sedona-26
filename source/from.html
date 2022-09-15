@@ -25,6 +25,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script type="module" src="js/main.js"></script>
 
@@ -100,18 +104,18 @@
           <fieldset class="form__item form__item--introduction">
             <legend class="form__legend">Представьтесь:</legend>
             <label class="form__input input">
-              <span>Имя*:</span>
-              <input class="input__text" type="text" name="first-name" value="Пётр" placeholder="Имя" min="2" max="25"
+              <span class="input__label">Имя*:</span>
+              <input class="input__text" type="text" name="first-name" value="Пётр" placeholder="Имя" minlength="2" maxlength="25"
                 required>
             </label>
             <label class="form__input input">
-              <span>Фамилия*:</span>
-              <input class="input__text" type="text" name="middle-name" value="Пустота" min="2" max="25"
+              <span class="input__label">Фамилия*:</span>
+              <input class="input__text" type="text" name="middle-name" value="Пустота" minlength="2" maxlength="25"
                 placeholder="Фамилия" required>
             </label>
             <label class="form__input input">
-              <span>Отчество*:</span>
-              <input class="input__text" type="text" name="last-name" value="Викторович" min="2" max="25"
+              <span class="input__label">Отчество*:</span>
+              <input class="input__text" type="text" name="last-name" value="Викторович" minlength="2" maxlength="25"
                 placeholder="Отчество" required>
             </label>
           </fieldset>
@@ -119,22 +123,22 @@
           <fieldset class="form__item form__item--contacts">
             <legend class="form__legend">Контактная информация:</legend>
             <label class="form__input input">
-              <span>Контактный телефон*:</span>
-              <div class="input__text-wrapper">
+              <span class="input__label">Контактный телефон*:</span>
+              <span class="input__text-wrapper">
                 <input class="input__text input__text--contacts" type="tel" name="tel" placeholder="Введите телефон" required>
                 <svg class="input__icon" viewBox="0 0 18 18" width="18" height="18">
                   <use href="img/sprites/sprite.svg#phone"></use>
                 </svg>
-              </div>
+              </span>
             </label>
             <label class="form__input input">
-              <span>Электронная почта*:</span>
-              <div class="input__text-wrapper">
+              <span class="input__label">Электронная почта*:</span>
+              <span class="input__text-wrapper">
                 <input class="input__text input__text--contacts" type="email" name="email" placeholder="Введите e-mail" required>
                 <svg class="input__icon" viewBox="0 0 18 18" width="18" height="18" preserveAspectRatio="xMidYMid meet">
                   <use href="img/sprites/sprite.svg#email"></use>
                 </svg>
-              </div>
+              </span>
             </label>
           </fieldset>
 
@@ -147,7 +151,7 @@
               </label>
               <label class="form__label radio">
                 <input class="radio__input" type="radio" name="impression" value="impression-negative">
-                <span>Скорее отрицательное</span=>
+                <span>Скорее отрицательное</span>
               </label>
               <label class="form__label radio">
                 <input class="radio__input" type="radio" name="impression" value="impression-neutral">
@@ -225,6 +229,7 @@
           <span class="visually-hidden">HTML Academy</span>
         </a>
       </footer>
+    </div>
 
     <!-- Сообщение об успешном создании объявления -->
     <template class="modal-success">
