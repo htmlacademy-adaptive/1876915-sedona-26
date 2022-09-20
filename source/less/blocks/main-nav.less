@@ -14,9 +14,13 @@
 
   @media @tablet {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "a b ... c d";
+    position: relative;
+    grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
     background-color: @bg-color-white;
+  }
+
+  @media @desktop {
+    grid-template-columns: 0.65fr 1fr 1fr 0.65fr;
   }
 
   &--hidden {
@@ -39,20 +43,24 @@
   @media @tablet {
     border: none;
 
-    &:nth-child(n+1) {
-      grid-area: a;
+    &:nth-child(4n+2) {
+      margin-right: 80px;
     }
 
-    &:nth-child(n+2) {
-      grid-area: b;
+    &:nth-child(4n+3) {
+      margin-left: 80px;
+    }
+  }
+
+  @media @desktop {
+    border: none;
+
+    &:nth-child(4n+2) {
+      margin-right: 118px;
     }
 
-    &:nth-child(n+3) {
-      grid-area: c;
-    }
-
-    &:nth-child(n+4) {
-      grid-area: d;
+    &:nth-child(4n+3) {
+      margin-left: 118px;
     }
   }
 
@@ -179,4 +187,8 @@
   @media @tablet {
     display: none;
   }
+}
+
+.main-header--no-js .main-nav__button {
+  display: none;
 }

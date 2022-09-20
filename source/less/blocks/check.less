@@ -1,12 +1,12 @@
 .check {
   position: relative;
-  line-height: 46px;
   text-transform: none;
   font-size: @font-size-heading-small;
   font-weight: 700;
 }
 
-.check-box__input {
+.check__input {
+  .visually-hidden();
   opacity: 0;
 
   &:not(:checked) + span::after {
@@ -26,7 +26,12 @@
 }
 
 .check span {
+  display: block;
   position: relative;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 11px;
   padding-left: 37px;
   @check-box-size: 46px;
 
@@ -38,8 +43,8 @@
     background-color: #f2f2f2;
     border-radius: 5px;
     left: -25px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    transform: translateY(-25%);
   }
 
   &::after {
@@ -50,7 +55,7 @@
     border-right: 3px solid @check-mark-color;
     border-bottom: 3px solid @check-mark-color;
     left: calc(@check-box-size/2 - 25px);
-    top: 50%;
-    transform: translateY(-75%) translateX(-50%) rotate(45deg);
+    top: 0;
+    transform: translate(-50%, -10%) rotate(45deg);
   }
 }

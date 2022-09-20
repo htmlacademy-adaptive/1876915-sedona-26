@@ -1,6 +1,7 @@
 const MIN_TEL_LENGTH = 10;
 
 document.querySelector('.main-header--no-js')?.classList.remove('main-header--no-js');
+document.querySelector('.hotel-search__map--no-js')?.classList.remove('hotel-search__map--no-js');
 const navButton = document.querySelector('.main-nav__button');
 const navMenu = document.querySelector('.main-nav__list');
 const form = document.querySelector('.form');

@@ -1,13 +1,13 @@
 .radio {
   position: relative;
   display: block;
-  line-height: 46px;
   text-transform: none;
   font-size: @font-size-heading-small;
   font-weight: 700;
 }
 
 .radio__input {
+  .visually-hidden();
   opacity: 0;
 
   &:not(:checked) + span::after {
@@ -26,7 +26,12 @@
 }
 
 .radio span {
+  display: block;
   position: relative;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 11px;
   padding-left: 36px;
   @radio-box-size: 46px;
 
@@ -38,8 +43,8 @@
     background-color: #f2f2f2;
     border-radius: 50%;
     left: -26px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -2px;
+    transform: translateY(-25%);
   }
 
   &::after {
@@ -50,7 +55,7 @@
     background-color: @check-mark-color;
     border-radius: 50%;
     left: calc(@radio-box-size/2 - 26px);
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    top: calc(@radio-box-size/4 - 2px);
+    transform: translate(-50%, -50%);
   }
 }
