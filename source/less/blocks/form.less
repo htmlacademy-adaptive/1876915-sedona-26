@@ -1,11 +1,10 @@
 .form {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 22px;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
 
   @media @tablet {
+    display: grid;
+    grid-row-gap: 22px;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 60px;
   }
@@ -23,10 +22,11 @@
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 23px 20px;
   border: none;
 
   @media @tablet {
+    padding: 0;
     grid-column: 1/-1;
   }
 
@@ -38,6 +38,8 @@
   }
 
   &--contacts {
+    padding-bottom: 18px;
+
     @media @tablet {
       grid-column: 2/3;
     }
@@ -46,7 +48,7 @@
   &--impression {
     @media @tablet {
       margin-top: 26px;
-      margin-bottom: 26px;
+      margin-bottom: 12px;
     }
 
     @media @desktop {
@@ -90,47 +92,47 @@
   display: block;
   position: relative;
   box-sizing: border-box;
+  padding: 0 20px;
+  margin-bottom: 20px;
   width: 100%;
+  z-index: 2;
   text-align: center;
   float: left;
   clear: both;
-  padding: 0 20px;
-  margin-top: 23.5px;
-  margin-bottom: 19px;
+
+  & span {
+    display: block;
+    background-color: #ffffff;
+  }
 
   @media @tablet {
     .heading(middle);
     margin-bottom: 27px;
     margin-top: 0;
-    padding: 0;
+    padding: 0 120px;
     grid-column: 1/-1;
 
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      width: 19%;
+      width: 100%;
       height: 1px;
       top: 42%;
-      background-color: #e5e5e5;
-
-      @media @desktop {
-        width: 29.5%;
-      }
-    }
-
-    &::before {
       left: 0;
+      background-color: #e5e5e5;
+      z-index: -1;
     }
+  }
 
-    &::after {
-      right: 0;
-    }
+  @media @desktop {
+    padding: 0 280px;
   }
 }
 
 .form__item--introduction .form__legend,
 .form__item--contacts .form__legend {
+  padding: 0;
+
   &::before,
   &::after {
     display: none;
@@ -143,7 +145,7 @@
   }
 
   @media @desktop {
-    padding: 0 290px;
+    padding: 0 280px;
   }
 }
 
@@ -165,29 +167,40 @@
 
   @media @desktop {
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: space-between;
     width: auto;
     margin: 0 54px;
+    margin-top: 17px;
   }
 }
 
 .form__item--places .form__labels-wrapper {
   @media @desktop {
-    margin: 0 45px;
+    margin: 0;
+    margin-left: 69px;
+    margin-right: 46px;
   }
 }
 
 .form__label {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 
   &:last-of-type {
-    margin-bottom: 1px;
+    @media @mobile {
+      margin-bottom: 0;
+    }
   }
 
-  @media @desktop {
-    margin: 17px 0;
+  @media @tablet {
+    margin-bottom: 16px;
+  }
+
+  &.radio,
+  &.check {
+    margin-left: 25px;
   }
 }
 
@@ -241,7 +254,7 @@
   max-width: 768px;
   height: 150px;
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 11px;
   padding: 13px;
   background-color: #f2f2f2;
   border: 4px solid transparent;
@@ -288,7 +301,7 @@
   letter-spacing: 0.02em;
   padding: 0;
   margin-top: 2px;
-  margin-bottom: 53px;
+  margin-bottom: 30px;
 
   @media @tablet {
     font-size: 14px;
