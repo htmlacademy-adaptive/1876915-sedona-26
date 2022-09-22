@@ -166,21 +166,23 @@
   }
 
   @media @desktop {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 270px 270px 290px;
+    justify-items: stretch;
+    column-gap: 0;
     box-sizing: border-box;
     justify-content: space-between;
     width: auto;
-    margin: 0 54px;
+    margin: 0;
     margin-top: 17px;
+    margin-left: 54px;
   }
 }
 
 .form__item--places .form__labels-wrapper {
   @media @desktop {
+    grid-template-columns: 213px 212px 195px 203px;
     margin: 0;
     margin-left: 69px;
-    margin-right: 46px;
   }
 }
 
